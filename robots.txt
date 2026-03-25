@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bonin147.github.io/sitemap.xml
