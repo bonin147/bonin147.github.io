@@ -22,7 +22,12 @@ title: Home
       {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
     </div>
     {% endif %}
+    {% if post.title_en %}
+    <h2 class="lang-ko"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <h2 class="lang-en"><a href="{{ post.url | relative_url }}">{{ post.title_en }}</a></h2>
+    {% else %}
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {% endif %}
     <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
     <a href="{{ post.url | relative_url }}" class="post-read" data-i18n="read">READ →</a>
   </li>
