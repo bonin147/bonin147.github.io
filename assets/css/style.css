@@ -891,8 +891,8 @@ a:hover {
 
 .stock-widget {
   margin-top: 1rem;
-  height: 85vh;
-  min-height: 600px;
+  height: 21vh;
+  min-height: 200px;
 }
 
 .stock-widget .tradingview-widget-container,
