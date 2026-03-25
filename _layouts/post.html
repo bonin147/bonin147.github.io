@@ -66,7 +66,7 @@ function switchPostLang(lang) {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
 }
-/* Default to Korean */
-switchPostLang('ko');
+/* Follow global language setting */
+switchPostLang(localStorage.getItem('lang') || 'en');
 </script>
 {% endif %}
