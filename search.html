@@ -4,9 +4,10 @@ title: Search
 permalink: /search/
 ---
 
-<h1>Search</h1>
+<h1 class="lang-ko">검색</h1>
+<h1 class="lang-en">Search</h1>
 
-<input type="text" class="search-input" id="search-input" placeholder="검색어를 입력하세요..." autofocus>
+<input type="text" class="search-input" id="search-input" placeholder="" autofocus>
 
 <ul class="search-results" id="search-results"></ul>
 
@@ -28,8 +29,15 @@ permalink: /search/
   var input = document.getElementById('search-input');
   var results = document.getElementById('search-results');
 
+  function updatePlaceholder() {
+    var lang = localStorage.getItem('lang') || 'ko';
+    input.placeholder = lang === 'ko' ? '검색어를 입력하세요...' : 'Search posts...';
+  }
+  updatePlaceholder();
+
   input.addEventListener('input', function() {
     var query = this.value.toLowerCase().trim();
+    var lang = localStorage.getItem('lang') || 'ko';
     results.innerHTML = '';
 
     if (query.length < 2) return;
@@ -42,7 +50,8 @@ permalink: /search/
     });
 
     if (matches.length === 0) {
-      results.innerHTML = '<li style="color:var(--text-muted);padding:1rem 0;">검색 결과가 없습니다.</li>';
+      var noResult = lang === 'ko' ? '검색 결과가 없습니다.' : 'No results found.';
+      results.innerHTML = '<li style="color:var(--text-muted);padding:1rem 0;">' + noResult + '</li>';
       return;
     }
 
