@@ -35,12 +35,6 @@
             <li><a href="{{ '/search/' | relative_url }}" {% if page.url == '/search/' %}class="active"{% endif %}>Search</a></li>
           </ul>
 
-          <div class="sidebar-section-title">Topics</div>
-          <ul class="sidebar-topics">
-            {% for topic in site.topics %}
-            <li><a href="{{ '/search/' | relative_url }}">{{ topic }}</a></li>
-            {% endfor %}
-          </ul>
         </nav>
 
         <div class="sidebar-footer">
