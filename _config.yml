@@ -1,7 +1,7 @@
 title: AI Insights
 description: "인공지능의 최신 트렌드, 기술, 그리고 미래를 탐구하는 블로그"
-url: "" # GitHub Pages URL (예: https://username.github.io)
-baseurl: "/blog" # 레포지토리 이름 (username.github.io 사용 시 "" 로 변경)
+url: "https://bonin147.github.io" # GitHub Pages URL (예: https://username.github.io)
+baseurl: "" # 레포지토리 이름 (username.github.io 사용 시 "" 로 변경)
 
 # 빌드 설정
 markdown: kramdown
