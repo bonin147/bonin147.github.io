@@ -895,7 +895,8 @@ a:hover {
   min-height: 600px;
 }
 
-.stock-widget .tradingview-widget-container {
+.stock-widget .tradingview-widget-container,
+.stock-widget .tradingview-widget-container > div {
   height: 100%;
 }
 
