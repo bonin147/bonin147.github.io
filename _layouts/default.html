@@ -26,13 +26,13 @@
         </div>
 
         <nav class="sidebar-nav">
-          <div class="sidebar-section-title">Pages</div>
+          <div class="sidebar-section-title" data-i18n="pages">Pages</div>
           <ul class="sidebar-pages">
-            <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Posts</a></li>
-            <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About / CV</a></li>
-            <li><a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}class="active"{% endif %}>Publications</a></li>
-            <li><a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}class="active"{% endif %}>Projects</a></li>
-            <li><a href="{{ '/search/' | relative_url }}" {% if page.url == '/search/' %}class="active"{% endif %}>Search</a></li>
+            <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %} data-i18n="posts">Posts</a></li>
+            <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %} data-i18n="about">About / CV</a></li>
+            <li><a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}class="active"{% endif %} data-i18n="publications">Publications</a></li>
+            <li><a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}class="active"{% endif %} data-i18n="projects">Projects</a></li>
+            <li><a href="{{ '/search/' | relative_url }}" {% if page.url == '/search/' %}class="active"{% endif %} data-i18n="search">Search</a></li>
           </ul>
 
         </nav>
@@ -43,10 +43,14 @@
             {% if site.social.scholar %}<a href="{{ site.social.scholar }}" target="_blank">Scholar</a>{% endif %}
             <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
           </div>
+          <div class="global-lang-toggle">
+            <button class="global-lang-btn active" data-lang="ko" onclick="setGlobalLang('ko')">KO</button>
+            <button class="global-lang-btn" data-lang="en" onclick="setGlobalLang('en')">EN</button>
+          </div>
           <label class="dark-toggle">
             <input type="checkbox" id="dark-check" onchange="toggleTheme()">
             <span class="dark-slider"></span>
-            <span class="dark-label">Dark mode</span>
+            <span class="dark-label" data-i18n="dark_mode">Dark mode</span>
           </label>
         </div>
       </div>
@@ -65,6 +69,7 @@
   </div>
 
   <script>
+    /* Dark mode */
     function toggleTheme() {
       var isDark = document.getElementById('dark-check').checked;
       document.documentElement.classList.toggle('dark', isDark);
@@ -77,6 +82,62 @@
         var cb = document.getElementById('dark-check');
         if (cb) cb.checked = true;
       }
+    })();
+
+    /* Global language */
+    var i18n = {
+      ko: {
+        pages: '페이지', posts: '글 목록', about: '소개 / CV',
+        publications: '논문', projects: '프로젝트', search: '검색',
+        dark_mode: '다크 모드', research_blog: 'Research Blog', read: '읽기 →'
+      },
+      en: {
+        pages: 'Pages', posts: 'Posts', about: 'About / CV',
+        publications: 'Publications', projects: 'Projects', search: 'Search',
+        dark_mode: 'Dark mode', research_blog: 'Research Blog', read: 'READ →'
+      }
+    };
+
+    function setGlobalLang(lang) {
+      localStorage.setItem('lang', lang);
+      applyGlobalLang(lang);
+    }
+
+    function applyGlobalLang(lang) {
+      /* Update sidebar toggle buttons */
+      document.querySelectorAll('.global-lang-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+
+      /* Update i18n text */
+      var strings = i18n[lang] || i18n['ko'];
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (strings[key]) el.textContent = strings[key];
+      });
+
+      /* Update bilingual post content */
+      var hasKo = document.querySelector('.lang-ko');
+      var hasEn = document.querySelector('.lang-en');
+      if (hasKo && hasEn) {
+        document.querySelectorAll('.lang-ko, .lang-en').forEach(function(el) {
+          el.style.display = 'none';
+        });
+        document.querySelectorAll('.lang-' + lang).forEach(function(el) {
+          el.style.display = 'block';
+        });
+        /* Sync per-post toggle buttons if present */
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+      }
+
+      document.documentElement.setAttribute('lang', lang);
+    }
+
+    (function() {
+      var lang = localStorage.getItem('lang') || 'ko';
+      applyGlobalLang(lang);
     })();
   </script>
 </body>

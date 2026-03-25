@@ -284,6 +284,42 @@ a:hover {
   display: none;
 }
 
+/* Global Language Toggle */
+.global-lang-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+
+.global-lang-btn {
+  background: none;
+  border: none;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 0.05em;
+}
+
+.global-lang-btn + .global-lang-btn {
+  border-left: 1px solid var(--border);
+}
+
+.global-lang-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.global-lang-btn:hover:not(.active) {
+  background: var(--tag-bg);
+  color: var(--text);
+}
+
 /* Mobile Header */
 .mobile-header {
   display: none;

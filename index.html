@@ -2,7 +2,7 @@
 layout: default
 title: Home
 ---
-<div class="page-label">Research Blog</div>
+<div class="page-label" data-i18n="research_blog">Research Blog</div>
 <h1 class="page-heading">{{ site.title }}</h1>
 <p class="page-description">
   {{ site.description }}
@@ -21,7 +21,7 @@ title: Home
     {% endif %}
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-    <a href="{{ post.url | relative_url }}" class="post-read">READ →</a>
+    <a href="{{ post.url | relative_url }}" class="post-read" data-i18n="read">READ →</a>
   </li>
   {% endfor %}
 </ul>
