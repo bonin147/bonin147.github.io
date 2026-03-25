@@ -867,12 +867,48 @@ a:hover {
 }
 
 /* ---- Stock Widget ---- */
+.stock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fullscreen-btn {
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+}
+
+.fullscreen-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
 .stock-widget {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  height: calc(100vh - 160px);
+  min-height: 400px;
 }
 
 .stock-widget .tradingview-widget-container {
-  height: 500px;
+  height: 100%;
+}
+
+.stock-widget.stock-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  margin: 0;
+  background: var(--bg);
+  padding: 0;
 }
 
 /* ---- Responsive ---- */
