@@ -11,13 +11,36 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="header-inner">
       <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
-      <p class="site-description">{{ site.description }}</p>
+      <p class="site-tagline">{{ site.description }}</p>
+
+      <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.site-nav').classList.toggle('open')">&#9776; Menu</button>
+
       <nav class="site-nav">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/about' | relative_url }}">About</a>
+        <div class="nav-links">
+          <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Posts</a>
+          <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About</a>
+          <a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}class="active"{% endif %}>Publications</a>
+          <a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}class="active"{% endif %}>Projects</a>
+          <a href="{{ '/search/' | relative_url }}" {% if page.url == '/search/' %}class="active"{% endif %}>Search</a>
+        </div>
+        <div class="nav-topics">
+          <span class="topics-label">Topics:</span>
+          {% for topic in site.topics %}
+            <a href="{{ '/topics/' | relative_url }}#{{ topic | slugify }}" class="topic-tag">{{ topic }}</a>
+          {% endfor %}
+        </div>
       </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+        <div class="social-links">
+          {% if site.social.github %}<a href="https://github.com/{{ site.social.github }}" target="_blank">GitHub</a>{% endif %}
+          {% if site.social.scholar %}<a href="{{ site.social.scholar }}" target="_blank">Scholar</a>{% endif %}
+          <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -30,5 +53,24 @@
       <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      body.classList.toggle('light-mode');
+      const isLight = body.classList.contains('light-mode');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      document.querySelector('.theme-toggle').textContent = isLight ? '☀️' : '🌙';
+    }
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light') {
+        document.body.classList.add('light-mode');
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelector('.theme-toggle').textContent = '☀️';
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

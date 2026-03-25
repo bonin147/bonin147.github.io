@@ -18,12 +18,23 @@ plugins:
 
 # 작성자 정보
 author:
-  name: "Your Name"
-  email: "your-email@example.com"
+  name: "JaeHyeon Cho"
+  email: "jh.cho@lgcns.com"
 
 # 소셜 링크
 social:
-  github: # your-github-username
+  github: bonin147
+  scholar: "https://scholar.google.com/citations?user=v4A8cuUAAAAJ&hl=ko"
+  linkedin: "https://www.linkedin.com/in/jaehyeoncho0147/"
+  instagram: bonin147
+
+# Topics (네비게이션에 표시)
+topics:
+  - RLHF
+  - NLP
+  - RAG
+  - Deep Learning
+  - Preference Optimization
 
 # 페이지네이션
 paginate: 5
@@ -35,4 +46,4 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Your Name"
+      author: "JaeHyeon Cho"
