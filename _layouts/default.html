@@ -80,7 +80,7 @@
       var giscusFrame = document.querySelector('iframe.giscus-frame');
       if (giscusFrame) {
         giscusFrame.contentWindow.postMessage(
-          { giscus: { setConfig: { theme: isDark ? 'dark' : 'light' } } }, 'https://giscus.app'
+          { giscus: { setConfig: { theme: isDark ? 'noborder_dark' : 'noborder_light' } } }, 'https://giscus.app'
         );
       }
     }
