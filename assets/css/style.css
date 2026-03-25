@@ -878,9 +878,10 @@ a:hover {
     top: 0;
     left: 0;
     width: 240px;
-    height: 100vh;
+    height: 100dvh;
     z-index: 200;
     box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+    padding-bottom: env(safe-area-inset-bottom, 1.5rem);
   }
 
   .sidebar.open {
