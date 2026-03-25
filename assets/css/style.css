@@ -245,6 +245,45 @@ a:hover {
   font-weight: 500;
 }
 
+/* Language Toggle */
+.lang-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 0.8rem;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.8rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.lang-btn + .lang-btn {
+  border-left: 1px solid var(--border);
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.lang-btn:hover:not(.active) {
+  background: var(--tag-bg);
+  color: var(--text);
+}
+
+.lang-en {
+  display: none;
+}
+
 /* Mobile Header */
 .mobile-header {
   display: none;
