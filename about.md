@@ -55,25 +55,25 @@ permalink: /about/
 <h2>Publications</h2>
 
 <div class="pub-item">
-  <div class="pub-title">Beyond RAG vs. Long-Context: Learning Distraction-Aware Retrieval for Efficient Knowledge Grounding</div>
+  <div class="pub-title"><a href="https://arxiv.org/abs/2509.21865" target="_blank">Beyond RAG vs. Long-Context: Learning Distraction-Aware Retrieval for Efficient Knowledge Grounding</a></div>
   <div class="pub-authors">Seong-Woong Shim, Myunsoo Kim, <strong>Jae Hyeon Cho</strong>, Byungjun Lee</div>
   <div class="pub-venue">ICLR, 2026</div>
 </div>
 
 <div class="pub-item">
-  <div class="pub-title">K/DA: Automated Data Generation Pipeline for Detoxifying Implicitly Offensive Language in Korean</div>
+  <div class="pub-title"><a href="https://arxiv.org/abs/2506.13513" target="_blank">K/DA: Automated Data Generation Pipeline for Detoxifying Implicitly Offensive Language in Korean</a></div>
   <div class="pub-authors">Minkyeong Jeon*, Hyemin Jeong*, Yerang Kim, Jiyoung Kim, <strong>Jae Hyeon Cho</strong>, Byung-Jun Lee</div>
   <div class="pub-venue">ACL, 2025</div>
 </div>
 
 <div class="pub-item">
-  <div class="pub-title">Rethinking DPO: The Role of Rejected Responses in Preference Misalignment</div>
+  <div class="pub-title"><a href="https://arxiv.org/abs/2506.12725" target="_blank">Rethinking DPO: The Role of Rejected Responses in Preference Misalignment</a></div>
   <div class="pub-authors"><strong>Jae Hyeon Cho</strong>, JunHyeok Oh, Myunsoo Kim, Byung-Jun Lee</div>
   <div class="pub-venue">Findings of EMNLP, 2025</div>
 </div>
 
 <div class="pub-item">
-  <div class="pub-title">VPO: Leveraging the Number of Votes in Preference Optimization</div>
+  <div class="pub-title"><a href="https://arxiv.org/abs/2410.22891" target="_blank">VPO: Leveraging the Number of Votes in Preference Optimization</a></div>
   <div class="pub-authors"><strong>Jae Hyeon Cho</strong>, Minkyung Park, Byungjun Lee</div>
   <div class="pub-venue">Computational Linguistics, 2025</div>
 </div>
@@ -138,7 +138,7 @@ permalink: /about/
 <div class="about-section">
 <h2>Contact</h2>
 <div class="contact-list">
-  <a href="mailto:jh.cho@lgcns.com">📧 Email</a>
+  <a href="mailto:bonin147@gmail.com">📧 Email</a>
   <a href="https://github.com/bonin147" target="_blank">💻 GitHub</a>
   <a href="https://scholar.google.com/citations?user=v4A8cuUAAAAJ&hl=ko" target="_blank">🎓 Google Scholar</a>
   <a href="https://www.linkedin.com/in/jaehyeoncho0147/" target="_blank">💼 LinkedIn</a>
