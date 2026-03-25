@@ -861,6 +861,13 @@ a:hover {
   color: #fff;
 }
 
+/* ---- Comments ---- */
+.post-comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
 /* ---- Footer (hidden in sidebar layout) ---- */
 .site-footer {
   display: none;
