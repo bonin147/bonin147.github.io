@@ -22,7 +22,8 @@
       <div class="sidebar-inner">
         <div class="sidebar-header">
           <a href="{{ '/' | relative_url }}" class="sidebar-name">{{ site.author.name }}</a>
-          <p class="sidebar-desc">{{ site.description }}</p>
+          <p class="sidebar-desc lang-ko">{{ site.description }}</p>
+          <p class="sidebar-desc lang-en">{{ site.description_en | default: site.description }}</p>
         </div>
 
         <nav class="sidebar-nav">
@@ -116,13 +117,21 @@
         if (strings[key]) el.textContent = strings[key];
       });
 
-      /* Update page-level bilingual content (non-post pages) */
+      /* Update sidebar bilingual content (always) */
+      document.querySelectorAll('.sidebar .lang-ko, .sidebar .lang-en').forEach(function(el) {
+        el.style.display = 'none';
+      });
+      document.querySelectorAll('.sidebar .lang-' + lang).forEach(function(el) {
+        el.style.display = 'block';
+      });
+
+      /* Update page-level bilingual content (non-post pages only) */
       var isPost = document.querySelector('.post-content');
       if (!isPost) {
-        document.querySelectorAll('.lang-ko, .lang-en').forEach(function(el) {
+        document.querySelectorAll('.main-content .lang-ko, .main-content .lang-en').forEach(function(el) {
           el.style.display = 'none';
         });
-        document.querySelectorAll('.lang-' + lang).forEach(function(el) {
+        document.querySelectorAll('.main-content .lang-' + lang).forEach(function(el) {
           el.style.display = 'block';
         });
       }
