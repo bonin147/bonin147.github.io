@@ -9,7 +9,7 @@ permalink: /about/
 <div class="profile-section">
   <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Profile" class="profile-photo" onerror="this.style.display='none'">
   <div class="profile-info">
-    <h1>JaeHyeon Cho</h1>
+    <h1>{{ site.author.name }}</h1>
     <p class="role">Researcher · LG CNS Agentic Intelligence Lab</p>
   </div>
 </div>

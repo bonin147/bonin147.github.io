@@ -21,8 +21,8 @@
     <aside class="sidebar">
       <div class="sidebar-inner">
         <div class="sidebar-header">
-          <a href="{{ '/' | relative_url }}" class="sidebar-name">JaeHyeon Cho</a>
-          <p class="sidebar-desc">RLHF, NLP, RAG,<br>AND AI ENGINEERING</p>
+          <a href="{{ '/' | relative_url }}" class="sidebar-name">{{ site.author.name }}</a>
+          <p class="sidebar-desc">{{ site.description }}</p>
         </div>
 
         <nav class="sidebar-nav">
@@ -60,7 +60,7 @@
 
     <!-- Mobile Header -->
     <header class="mobile-header">
-      <a href="{{ '/' | relative_url }}" class="sidebar-name">JaeHyeon Cho</a>
+      <a href="{{ '/' | relative_url }}" class="sidebar-name">{{ site.author.name }}</a>
       <button class="mobile-menu-btn" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Menu">☰</button>
     </header>
 
