@@ -73,6 +73,8 @@ a:hover {
 .layout {
   display: flex;
   min-height: 100vh;
+  max-width: 1060px;
+  margin: 0 auto;
 }
 
 /* ---- Sidebar ---- */
