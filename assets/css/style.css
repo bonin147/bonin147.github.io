@@ -878,7 +878,8 @@ a:hover {
     top: 0;
     left: 0;
     width: 240px;
-    height: 100dvh;
+    height: 100%;
+    max-height: -webkit-fill-available;
     z-index: 200;
     box-shadow: 4px 0 20px rgba(0,0,0,0.1);
     overflow-y: auto;
@@ -886,7 +887,7 @@ a:hover {
   }
 
   .sidebar-inner {
-    padding-bottom: calc(2rem + env(safe-area-inset-bottom, 1.5rem));
+    padding-bottom: calc(3rem + env(safe-area-inset-bottom, 2rem));
   }
 
   .sidebar.open {
