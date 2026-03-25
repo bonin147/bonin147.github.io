@@ -866,6 +866,15 @@ a:hover {
   display: none;
 }
 
+/* ---- Stock Widget ---- */
+.stock-widget {
+  margin-top: 1.5rem;
+}
+
+.stock-widget .tradingview-widget-container {
+  height: 500px;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
   .layout {

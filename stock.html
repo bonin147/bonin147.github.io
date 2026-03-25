@@ -1,0 +1,32 @@
+---
+layout: default
+title: Stock
+permalink: /stock/
+---
+
+<h1 class="lang-ko">주가</h1>
+<h1 class="lang-en">Stock</h1>
+
+<div class="stock-widget">
+  <!-- TradingView Widget BEGIN -->
+  <div class="tradingview-widget-container">
+    <div id="tradingview_baba"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget({
+      "autosize": true,
+      "symbol": "NYSE:BABA",
+      "interval": "D",
+      "timezone": "Asia/Seoul",
+      "theme": localStorage.getItem('theme') === 'dark' ? 'dark' : 'light',
+      "style": "1",
+      "locale": "en",
+      "toolbar_bg": "#f1f3f6",
+      "enable_publishing": false,
+      "allow_symbol_change": true,
+      "container_id": "tradingview_baba"
+    });
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+</div>

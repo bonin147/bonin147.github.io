@@ -34,6 +34,7 @@
             <li><a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}class="active"{% endif %} data-i18n="publications">Publications</a></li>
             <li><a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}class="active"{% endif %} data-i18n="projects">Projects</a></li>
             <li><a href="{{ '/search/' | relative_url }}" {% if page.url == '/search/' %}class="active"{% endif %} data-i18n="search">Search</a></li>
+            <li><a href="{{ '/stock/' | relative_url }}" {% if page.url == '/stock/' %}class="active"{% endif %} data-i18n="stock">Stock</a></li>
           </ul>
 
         </nav>
@@ -89,12 +90,12 @@
     var i18n = {
       ko: {
         pages: '페이지', posts: '글 목록', about: '소개 / CV',
-        publications: '논문', projects: '프로젝트', search: '검색',
+        publications: '논문', projects: '프로젝트', search: '검색', stock: '주가',
         dark_mode: '다크 모드', research_blog: 'Research Blog', read: '읽기 →'
       },
       en: {
         pages: 'Pages', posts: 'Posts', about: 'About / CV',
-        publications: 'Publications', projects: 'Projects', search: 'Search',
+        publications: 'Publications', projects: 'Projects', search: 'Search', stock: 'Stock',
         dark_mode: 'Dark mode', research_blog: 'Research Blog', read: 'READ →'
       }
     };
