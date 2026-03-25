@@ -6,14 +6,14 @@ title: Home
   {% for post in site.posts %}
   <li class="post-item">
     <div class="post-meta">
-      <time>{{ post.date | date: "%Y년 %m월 %d일" }}</time>
+      <time>{{ post.date | date: "%Y · %m · %d" }}</time>
       {% if post.categories.size > 0 %} · {% for cat in post.categories %}<span class="category">{{ cat }}</span>{% endfor %}{% endif %}
     </div>
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
     {% if post.tags.size > 0 %}
     <div class="post-tags">
-      {% for tag in post.tags %}<span class="tag">#{{ tag }}</span>{% endfor %}
+      {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
     </div>
     {% endif %}
   </li>
