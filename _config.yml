@@ -1,0 +1,38 @@
+title: AI Insights
+description: "인공지능의 최신 트렌드, 기술, 그리고 미래를 탐구하는 블로그"
+url: "" # GitHub Pages URL (예: https://username.github.io)
+baseurl: "/blog" # 레포지토리 이름 (username.github.io 사용 시 "" 로 변경)
+
+# 빌드 설정
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# 테마 설정
+remote_theme: pages-themes/midnight@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# 작성자 정보
+author:
+  name: "Your Name"
+  email: "your-email@example.com"
+
+# 소셜 링크
+social:
+  github: # your-github-username
+
+# 페이지네이션
+paginate: 5
+
+# 기본 Front Matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
