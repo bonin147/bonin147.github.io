@@ -8,10 +8,8 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 
-# 테마 설정
-remote_theme: pages-themes/midnight@v0.2.0
+# 플러그인
 plugins:
-  - jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
