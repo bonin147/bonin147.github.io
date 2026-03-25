@@ -899,6 +899,39 @@ a:hover {
   height: 100%;
 }
 
+.stock-research {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.stock-research h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.stock-research table {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.stock-research td,
+.stock-research th {
+  padding: 0.4rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+}
+
+.stock-research th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
 .stock-widget.stock-fullscreen {
   position: fixed;
   top: 0;
