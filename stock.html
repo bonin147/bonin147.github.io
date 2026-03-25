@@ -81,8 +81,6 @@ permalink: /stock/
 function toggleFullscreen() {
   var widget = document.getElementById('stock-widget');
   widget.classList.toggle('stock-fullscreen');
-  var icon = document.getElementById('fs-icon');
-  icon.innerHTML = widget.classList.contains('stock-fullscreen') ? '&#x2716;' : '&#x26F6;';
   document.body.style.overflow = widget.classList.contains('stock-fullscreen') ? 'hidden' : '';
 }
 document.addEventListener('keydown', function(e) {
