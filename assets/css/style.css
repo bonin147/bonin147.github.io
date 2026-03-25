@@ -93,7 +93,7 @@ a:hover {
   padding: 2.5rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .sidebar-header {
@@ -881,7 +881,12 @@ a:hover {
     height: 100dvh;
     z-index: 200;
     box-shadow: 4px 0 20px rgba(0,0,0,0.1);
-    padding-bottom: env(safe-area-inset-bottom, 1.5rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sidebar-inner {
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom, 1.5rem));
   }
 
   .sidebar.open {
