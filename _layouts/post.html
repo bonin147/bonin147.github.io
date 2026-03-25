@@ -12,11 +12,16 @@ layout: default
       {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
     </div>
     {% endif %}
+    {% if page.bilingual and page.title_en %}
+    <h1 class="post-title post-title-ko">{{ page.title }}</h1>
+    <h1 class="post-title post-title-en" style="display:none;">{{ page.title_en }}</h1>
+    {% else %}
     <h1 class="post-title">{{ page.title }}</h1>
+    {% endif %}
     {% if page.bilingual %}
     <div class="lang-toggle">
-      <button class="lang-btn active" data-lang="ko" onclick="switchLang('ko')">한국어</button>
-      <button class="lang-btn" data-lang="en" onclick="switchLang('en')">English</button>
+      <button class="lang-btn active" data-lang="ko" onclick="switchPostLang('ko')">한국어</button>
+      <button class="lang-btn" data-lang="en" onclick="switchPostLang('en')">English</button>
     </div>
     {% endif %}
   </header>
@@ -39,8 +44,29 @@ layout: default
 
 {% if page.bilingual %}
 <script>
-function switchLang(lang) {
-  setGlobalLang(lang);
+function switchPostLang(lang) {
+  /* Toggle post body content */
+  document.querySelectorAll('.post-content .lang-ko, .post-content .lang-en').forEach(function(el) {
+    el.style.display = 'none';
+  });
+  document.querySelectorAll('.post-content .lang-' + lang).forEach(function(el) {
+    el.style.display = 'block';
+  });
+
+  /* Toggle post title */
+  var titleKo = document.querySelector('.post-title-ko');
+  var titleEn = document.querySelector('.post-title-en');
+  if (titleKo && titleEn) {
+    titleKo.style.display = lang === 'ko' ? 'block' : 'none';
+    titleEn.style.display = lang === 'en' ? 'block' : 'none';
+  }
+
+  /* Update toggle buttons */
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
 }
+/* Default to Korean */
+switchPostLang('ko');
 </script>
 {% endif %}

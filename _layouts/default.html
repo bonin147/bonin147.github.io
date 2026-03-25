@@ -116,20 +116,16 @@
         if (strings[key]) el.textContent = strings[key];
       });
 
-      /* Update bilingual content */
-      document.querySelectorAll('.lang-ko, .lang-en').forEach(function(el) {
-        el.style.display = 'none';
-      });
-      document.querySelectorAll('.lang-' + lang).forEach(function(el) {
-        el.style.display = '';
-        if (el.style.display === '' || el.style.display === 'none') {
+      /* Update page-level bilingual content (non-post pages) */
+      var isPost = document.querySelector('.post-content');
+      if (!isPost) {
+        document.querySelectorAll('.lang-ko, .lang-en').forEach(function(el) {
+          el.style.display = 'none';
+        });
+        document.querySelectorAll('.lang-' + lang).forEach(function(el) {
           el.style.display = 'block';
-        }
-      });
-      /* Sync per-post toggle buttons if present */
-      document.querySelectorAll('.lang-btn').forEach(function(btn) {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-      });
+        });
+      }
 
       document.documentElement.setAttribute('lang', lang);
     }

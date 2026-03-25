@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "HyperAgents: 스스로 개선하는 AI 시스템의 새로운 패러다임"
+title_en: "HyperAgents: A New Paradigm for Self-Improving AI Systems"
 date: 2026-03-25
 categories: [LLM]
 tags: [Self-Improvement, OpenEndedness, MetaLearning, Agent, Meta]
