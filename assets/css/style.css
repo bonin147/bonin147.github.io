@@ -579,13 +579,8 @@ html.dark .subcategory-index-report {
 
 .post-header {
   margin-bottom: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  background: var(--bg);
-  z-index: 50;
-  padding-top: 1rem;
 }
 
 .paper-link-banner {
@@ -1264,10 +1259,6 @@ html.dark .subcategory-index-report {
 
   .post-title {
     font-size: 1.4rem;
-  }
-
-  .post-header {
-    top: 48px;
   }
 
   .profile-section {
