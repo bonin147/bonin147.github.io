@@ -12,13 +12,15 @@ title: Home
 </p>
 
 {% assign subcategories = "Paper Review,Stock Report,Index Report" | split: "," %}
+{% assign subcat_ko = "논문 리뷰,주식 리포트,지수 리포트" | split: "," %}
 {% for subcat in subcategories %}
   {% assign filtered = site.posts | where: "subcategory", subcat %}
   {% if filtered.size > 0 %}
   <div class="post-section">
     <div class="post-section-header">
       <h2 class="post-section-title">
-        <span class="subcategory-badge subcategory-{{ subcat | slugify }}">{{ subcat }}</span>
+        <span class="lang-ko">{{ subcat_ko[forloop.index0] }}</span>
+        <span class="lang-en">{{ subcat }}</span>
       </h2>
       <a href="{{ '/posts/' | append: subcat | slugify | append: '/' | relative_url }}" class="post-section-more">
         <span class="lang-ko">더보기 →</span>

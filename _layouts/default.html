@@ -37,21 +37,21 @@
         <nav class="sidebar-nav">
           <div class="sidebar-section-title" data-i18n="pages">Pages</div>
           <ul class="sidebar-pages">
-            <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %} data-i18n="posts">Posts</a></li>
+            <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.subcategory_filter %}class="active"{% endif %} data-i18n="posts">Posts</a></li>
             {% if page.url == '/' or page.subcategory_filter %}
             <ul class="sidebar-sub-list">
-              <li><a href="{{ '/posts/paper-review/' | relative_url }}" {% if page.subcategory_filter == 'Paper Review' %}class="active"{% endif %}>Paper Review</a></li>
-              <li><a href="{{ '/posts/stock-report/' | relative_url }}" {% if page.subcategory_filter == 'Stock Report' %}class="active"{% endif %}>Stock Report</a></li>
-              <li><a href="{{ '/posts/index-report/' | relative_url }}" {% if page.subcategory_filter == 'Index Report' %}class="active"{% endif %}>Index Report</a></li>
+              <li><a href="{{ '/posts/paper-review/' | relative_url }}" {% if page.subcategory_filter == 'Paper Review' %}class="active"{% endif %}><span class="lang-ko">논문 리뷰</span><span class="lang-en">Paper Review</span></a></li>
+              <li><a href="{{ '/posts/stock-report/' | relative_url }}" {% if page.subcategory_filter == 'Stock Report' %}class="active"{% endif %}><span class="lang-ko">주식 리포트</span><span class="lang-en">Stock Report</span></a></li>
+              <li><a href="{{ '/posts/index-report/' | relative_url }}" {% if page.subcategory_filter == 'Index Report' %}class="active"{% endif %}><span class="lang-ko">지수 리포트</span><span class="lang-en">Index Report</span></a></li>
             </ul>
             {% endif %}
             <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %} data-i18n="about">About / CV</a></li>
             <li><a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}class="active"{% endif %} data-i18n="publications">Publications</a></li>
             <li><a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}class="active"{% endif %} data-i18n="projects">Projects</a></li>
-            <li><a href="{{ '/stock/' | relative_url }}" {% if page.url contains '/stock' %}class="active"{% endif %} data-i18n="stock">Stock</a></li>
+            <li><a href="{{ '/stock/' | relative_url }}" {% if page.url contains '/stock/' and page.subcategory_filter == nil %}class="active"{% endif %} data-i18n="stock">Stock</a></li>
           </ul>
 
-          {% if page.url contains '/stock' %}
+          {% if page.url contains '/stock/' and page.subcategory_filter == nil %}
           <div class="sidebar-toc">
             <hr class="sidebar-divider">
             <div class="sidebar-section-title" data-i18n="stock">Stock</div>

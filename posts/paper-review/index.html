@@ -4,8 +4,16 @@ title: "Paper Review"
 permalink: /posts/paper-review/
 subcategory_filter: "Paper Review"
 ---
-<div class="page-label">Paper Review</div>
-<h1 class="page-heading">Paper Review</h1>
+<div class="page-label lang-ko">논문 리뷰</div>
+<div class="page-label lang-en">Paper Review</div>
+<h1 class="page-heading lang-ko">논문 리뷰</h1>
+<h1 class="page-heading lang-en">Paper Review</h1>
+<p class="page-description lang-ko">
+  최신 AI/ML 논문을 읽고 핵심 기여, 강점, 한계를 분석합니다.
+</p>
+<p class="page-description lang-en">
+  Reading and analyzing recent AI/ML papers — key contributions, strengths, and limitations.
+</p>
 
 <ul class="post-list">
   {% assign filtered = site.posts | where: "subcategory", "Paper Review" %}
@@ -15,7 +23,6 @@ subcategory_filter: "Paper Review"
       <div class="post-meta">
         {{ post.date | date: "%Y &middot; %m &middot; %d" }}
       </div>
-      <span class="subcategory-badge subcategory-paper-review">Paper Review</span>
     </div>
     {% if post.tags.size > 0 %}
     <div class="post-tags">
