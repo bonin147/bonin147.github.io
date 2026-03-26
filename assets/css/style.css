@@ -168,17 +168,6 @@ a:hover {
   color: var(--accent);
 }
 
-.sidebar-sub {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar-sub li a {
-  padding-left: 2rem;
-  font-size: 0.82rem;
-}
-
 .sidebar-pages a.active {
   color: var(--accent);
   border-left-color: var(--accent);

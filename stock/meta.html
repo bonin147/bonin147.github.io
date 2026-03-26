@@ -1,0 +1,81 @@
+---
+layout: default
+title: "META - Meta Platforms"
+permalink: /stock/meta/
+---
+
+<div class="stock-header">
+  <div>
+    <h1>META</h1>
+    <p class="stock-subtitle lang-ko">메타 플랫폼즈 · NASDAQ</p>
+    <p class="stock-subtitle lang-en">Meta Platforms · NASDAQ</p>
+  </div>
+  <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Fullscreen">
+    <span id="fs-icon">&#x26F6;</span>
+  </button>
+</div>
+
+<div class="stock-widget" id="stock-widget">
+  <button class="fullscreen-close-btn" onclick="toggleFullscreen()" title="Close fullscreen">&#x2716;</button>
+  <div class="tradingview-widget-container">
+    <div id="tradingview_chart"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget({
+      "autosize": true, "symbol": "NASDAQ:META", "interval": "D", "timezone": "Asia/Seoul",
+      "theme": localStorage.getItem('theme') === 'dark' ? 'dark' : 'light',
+      "style": "1", "locale": "en", "toolbar_bg": "#f1f3f6",
+      "enable_publishing": false, "allow_symbol_change": true, "container_id": "tradingview_chart"
+    });
+    </script>
+  </div>
+</div>
+
+<div class="stock-research">
+  <div class="lang-ko">
+    <h3>기관 리서치 요약</h3>
+    <p>메타에 대한 주요 IB의 공통 프레임은 <strong>"AI 기반 광고 타겟팅 고도화가 매출 성장을 얼마나 지속시킬 수 있는가"</strong>입니다. Advantage+ 등 AI 광고 도구가 광고 효율을 대폭 개선하고, Reels 수익화가 본궤도에 올랐습니다.</p>
+    <p><strong>컨센서스</strong>: Strong Buy (매수 40 · 보유 5 · 매도 1) · 평균 목표가 <strong>$690</strong> (+17.9%)</p>
+    <table>
+      <thead><tr><th>주요 지표</th><th>수치</th></tr></thead>
+      <tbody>
+        <tr><td>P/E (2026E)</td><td>23.5x</td></tr>
+        <tr><td>P/E (2027E)</td><td>20.1x</td></tr>
+        <tr><td>광고 매출 성장 (YoY)</td><td>~18%</td></tr>
+        <tr><td>Reality Labs 손실 (2026E)</td><td>~$18B</td></tr>
+        <tr><td>AI Capex (2026E)</td><td>$40B+</td></tr>
+      </tbody>
+    </table>
+    <a href="{{ '/2026/03/26/meta-deep-research/' | relative_url }}" class="post-read">전체 리포트 읽기 →</a>
+  </div>
+  <div class="lang-en">
+    <h3>Institutional Research Summary</h3>
+    <p>The consensus framework for Meta centers on <strong>"how long AI-driven ad targeting improvements can sustain revenue growth."</strong> Advantage+ and other AI ad tools have dramatically improved ad efficiency, while Reels monetization is now on track.</p>
+    <p><strong>Consensus</strong>: Strong Buy (Buy 40 · Hold 5 · Sell 1) · Average target <strong>$690</strong> (+17.9%)</p>
+    <table>
+      <thead><tr><th>Key Metric</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>P/E (2026E)</td><td>23.5x</td></tr>
+        <tr><td>P/E (2027E)</td><td>20.1x</td></tr>
+        <tr><td>Ad Revenue Growth (YoY)</td><td>~18%</td></tr>
+        <tr><td>Reality Labs Loss (2026E)</td><td>~$18B</td></tr>
+        <tr><td>AI Capex (2026E)</td><td>$40B+</td></tr>
+      </tbody>
+    </table>
+    <a href="{{ '/2026/03/26/meta-deep-research/' | relative_url }}" class="post-read">Read full report →</a>
+  </div>
+</div>
+
+<script>
+function toggleFullscreen() {
+  var widget = document.getElementById('stock-widget');
+  widget.classList.toggle('stock-fullscreen');
+  document.body.style.overflow = widget.classList.contains('stock-fullscreen') ? 'hidden' : '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var widget = document.getElementById('stock-widget');
+    if (widget && widget.classList.contains('stock-fullscreen')) toggleFullscreen();
+  }
+});
+</script>

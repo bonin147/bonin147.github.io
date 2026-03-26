@@ -1,0 +1,81 @@
+---
+layout: default
+title: "MSFT - Microsoft"
+permalink: /stock/msft/
+---
+
+<div class="stock-header">
+  <div>
+    <h1>MSFT</h1>
+    <p class="stock-subtitle lang-ko">마이크로소프트 · NASDAQ</p>
+    <p class="stock-subtitle lang-en">Microsoft · NASDAQ</p>
+  </div>
+  <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Fullscreen">
+    <span id="fs-icon">&#x26F6;</span>
+  </button>
+</div>
+
+<div class="stock-widget" id="stock-widget">
+  <button class="fullscreen-close-btn" onclick="toggleFullscreen()" title="Close fullscreen">&#x2716;</button>
+  <div class="tradingview-widget-container">
+    <div id="tradingview_chart"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget({
+      "autosize": true, "symbol": "NASDAQ:MSFT", "interval": "D", "timezone": "Asia/Seoul",
+      "theme": localStorage.getItem('theme') === 'dark' ? 'dark' : 'light',
+      "style": "1", "locale": "en", "toolbar_bg": "#f1f3f6",
+      "enable_publishing": false, "allow_symbol_change": true, "container_id": "tradingview_chart"
+    });
+    </script>
+  </div>
+</div>
+
+<div class="stock-research">
+  <div class="lang-ko">
+    <h3>기관 리서치 요약</h3>
+    <p>마이크로소프트에 대한 주요 IB의 공통 프레임은 <strong>"AI가 Azure와 Copilot을 통해 실질적 매출로 전환되는 속도"</strong>입니다. Azure 성장률이 30%+를 유지하며 AI 워크로드가 핵심 동력이고, Copilot이 Office/GitHub 전반에 확산 중입니다.</p>
+    <p><strong>컨센서스</strong>: Strong Buy (매수 42 · 보유 5 · 매도 0) · 평균 목표가 <strong>$480</strong> (+23.1%)</p>
+    <table>
+      <thead><tr><th>주요 지표</th><th>수치</th></tr></thead>
+      <tbody>
+        <tr><td>P/E (2026E)</td><td>31.5x</td></tr>
+        <tr><td>P/E (2027E)</td><td>27.0x</td></tr>
+        <tr><td>Azure 성장률 (YoY)</td><td>~33%</td></tr>
+        <tr><td>FCF (2026E)</td><td>$85B</td></tr>
+        <tr><td>AI Capex (2026E)</td><td>$80B+</td></tr>
+      </tbody>
+    </table>
+    <a href="{{ '/2026/03/26/microsoft-deep-research/' | relative_url }}" class="post-read">전체 리포트 읽기 →</a>
+  </div>
+  <div class="lang-en">
+    <h3>Institutional Research Summary</h3>
+    <p>The consensus framework for Microsoft centers on <strong>"how quickly AI translates into real revenue through Azure and Copilot."</strong> Azure maintains 30%+ growth with AI workloads as the key driver, while Copilot proliferates across Office/GitHub.</p>
+    <p><strong>Consensus</strong>: Strong Buy (Buy 42 · Hold 5 · Sell 0) · Average target <strong>$480</strong> (+23.1%)</p>
+    <table>
+      <thead><tr><th>Key Metric</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>P/E (2026E)</td><td>31.5x</td></tr>
+        <tr><td>P/E (2027E)</td><td>27.0x</td></tr>
+        <tr><td>Azure Growth (YoY)</td><td>~33%</td></tr>
+        <tr><td>FCF (2026E)</td><td>$85B</td></tr>
+        <tr><td>AI Capex (2026E)</td><td>$80B+</td></tr>
+      </tbody>
+    </table>
+    <a href="{{ '/2026/03/26/microsoft-deep-research/' | relative_url }}" class="post-read">Read full report →</a>
+  </div>
+</div>
+
+<script>
+function toggleFullscreen() {
+  var widget = document.getElementById('stock-widget');
+  widget.classList.toggle('stock-fullscreen');
+  document.body.style.overflow = widget.classList.contains('stock-fullscreen') ? 'hidden' : '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var widget = document.getElementById('stock-widget');
+    if (widget && widget.classList.contains('stock-fullscreen')) toggleFullscreen();
+  }
+});
+</script>

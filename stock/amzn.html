@@ -1,0 +1,81 @@
+---
+layout: default
+title: "AMZN - Amazon"
+permalink: /stock/amzn/
+---
+
+<div class="stock-header">
+  <div>
+    <h1>AMZN</h1>
+    <p class="stock-subtitle lang-ko">아마존 · NASDAQ</p>
+    <p class="stock-subtitle lang-en">Amazon · NASDAQ</p>
+  </div>
+  <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Fullscreen">
+    <span id="fs-icon">&#x26F6;</span>
+  </button>
+</div>
+
+<div class="stock-widget" id="stock-widget">
+  <button class="fullscreen-close-btn" onclick="toggleFullscreen()" title="Close fullscreen">&#x2716;</button>
+  <div class="tradingview-widget-container">
+    <div id="tradingview_chart"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget({
+      "autosize": true, "symbol": "NASDAQ:AMZN", "interval": "D", "timezone": "Asia/Seoul",
+      "theme": localStorage.getItem('theme') === 'dark' ? 'dark' : 'light',
+      "style": "1", "locale": "en", "toolbar_bg": "#f1f3f6",
+      "enable_publishing": false, "allow_symbol_change": true, "container_id": "tradingview_chart"
+    });
+    </script>
+  </div>
+</div>
+
+<div class="stock-research">
+  <div class="lang-ko">
+    <h3>기관 리서치 요약</h3>
+    <p>아마존에 대한 주요 IB의 공통 프레임은 <strong>"AWS AI 재가속 + 리테일 마진 확장의 동시 실현"</strong>입니다. AWS가 AI/Bedrock 수요로 성장이 재가속되고, 광고 사업이 $50B+ 규모로 고마진 성장을 지속합니다.</p>
+    <p><strong>컨센서스</strong>: Strong Buy (매수 44 · 보유 2 · 매도 0) · 평균 목표가 <strong>$240</strong> (+23.1%)</p>
+    <table>
+      <thead><tr><th>주요 지표</th><th>수치</th></tr></thead>
+      <tbody>
+        <tr><td>P/E (2026E)</td><td>29.5x</td></tr>
+        <tr><td>P/E (2027E)</td><td>23.8x</td></tr>
+        <tr><td>AWS 성장률 (YoY)</td><td>~22%</td></tr>
+        <tr><td>광고 매출 (2026E)</td><td>$58B</td></tr>
+        <tr><td>AI Capex (2026E)</td><td>$100B+</td></tr>
+      </tbody>
+    </table>
+    <a href="{{ '/2026/03/26/amazon-deep-research/' | relative_url }}" class="post-read">전체 리포트 읽기 →</a>
+  </div>
+  <div class="lang-en">
+    <h3>Institutional Research Summary</h3>
+    <p>The consensus framework for Amazon centers on <strong>"simultaneous AWS AI re-acceleration and retail margin expansion."</strong> AWS growth is re-accelerating with AI/Bedrock demand, while the advertising business sustains high-margin growth at $50B+ scale.</p>
+    <p><strong>Consensus</strong>: Strong Buy (Buy 44 · Hold 2 · Sell 0) · Average target <strong>$240</strong> (+23.1%)</p>
+    <table>
+      <thead><tr><th>Key Metric</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>P/E (2026E)</td><td>29.5x</td></tr>
+        <tr><td>P/E (2027E)</td><td>23.8x</td></tr>
+        <tr><td>AWS Growth (YoY)</td><td>~22%</td></tr>
+        <tr><td>Ad Revenue (2026E)</td><td>$58B</td></tr>
+        <tr><td>AI Capex (2026E)</td><td>$100B+</td></tr>
+      </tbody>
+    </table>
+    <a href="{{ '/2026/03/26/amazon-deep-research/' | relative_url }}" class="post-read">Read full report →</a>
+  </div>
+</div>
+
+<script>
+function toggleFullscreen() {
+  var widget = document.getElementById('stock-widget');
+  widget.classList.toggle('stock-fullscreen');
+  document.body.style.overflow = widget.classList.contains('stock-fullscreen') ? 'hidden' : '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var widget = document.getElementById('stock-widget');
+    if (widget && widget.classList.contains('stock-fullscreen')) toggleFullscreen();
+  }
+});
+</script>

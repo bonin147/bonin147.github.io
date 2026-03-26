@@ -34,15 +34,25 @@
             <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %} data-i18n="about">About / CV</a></li>
             <li><a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}class="active"{% endif %} data-i18n="publications">Publications</a></li>
             <li><a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}class="active"{% endif %} data-i18n="projects">Projects</a></li>
-            <li><a href="{{ '/search/' | relative_url }}" {% if page.url == '/search/' %}class="active"{% endif %} data-i18n="search">Search</a></li>
-            <li>
-              <a href="{{ '/stock/' | relative_url }}" {% if page.url contains '/stock' %}class="active"{% endif %} data-i18n="stock">Stock</a>
-              <ul class="sidebar-sub">
-                <li><a href="{{ '/stock/baba/' | relative_url }}" {% if page.url == '/stock/baba/' %}class="active"{% endif %}>BABA</a></li>
-                <li><a href="{{ '/stock/googl/' | relative_url }}" {% if page.url == '/stock/googl/' %}class="active"{% endif %}>GOOGL</a></li>
-              </ul>
-            </li>
+            <li><a href="{{ '/stock/' | relative_url }}" {% if page.url contains '/stock' %}class="active"{% endif %} data-i18n="stock">Stock</a></li>
           </ul>
+
+          {% if page.url contains '/stock' %}
+          <div class="sidebar-toc">
+            <hr class="sidebar-divider">
+            <div class="sidebar-section-title" data-i18n="stock">Stock</div>
+            <ul class="sidebar-toc-list">
+              <li><a href="{{ '/stock/aapl/' | relative_url }}" {% if page.url == '/stock/aapl/' %}class="active"{% endif %}>AAPL</a></li>
+              <li><a href="{{ '/stock/msft/' | relative_url }}" {% if page.url == '/stock/msft/' %}class="active"{% endif %}>MSFT</a></li>
+              <li><a href="{{ '/stock/googl/' | relative_url }}" {% if page.url == '/stock/googl/' %}class="active"{% endif %}>GOOGL</a></li>
+              <li><a href="{{ '/stock/amzn/' | relative_url }}" {% if page.url == '/stock/amzn/' %}class="active"{% endif %}>AMZN</a></li>
+              <li><a href="{{ '/stock/meta/' | relative_url }}" {% if page.url == '/stock/meta/' %}class="active"{% endif %}>META</a></li>
+              <li><a href="{{ '/stock/nvda/' | relative_url }}" {% if page.url == '/stock/nvda/' %}class="active"{% endif %}>NVDA</a></li>
+              <li><a href="{{ '/stock/tsla/' | relative_url }}" {% if page.url == '/stock/tsla/' %}class="active"{% endif %}>TSLA</a></li>
+              <li><a href="{{ '/stock/baba/' | relative_url }}" {% if page.url == '/stock/baba/' %}class="active"{% endif %}>BABA</a></li>
+            </ul>
+          </div>
+          {% endif %}
 
           <div class="sidebar-toc" id="sidebar-toc" style="display:none;">
             <hr class="sidebar-divider">
