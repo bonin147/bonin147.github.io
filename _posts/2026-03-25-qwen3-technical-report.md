@@ -4,6 +4,7 @@ title: "Qwen3 Technical Report: Thinking과 Non-Thinking의 통합"
 title_en: "Qwen3 Technical Report: Unifying Thinking and Non-Thinking Modes"
 date: 2026-03-25
 categories: [LLM]
+subcategory: "Paper Review"
 tags: [Qwen, MoE, Reasoning, Distillation, Alibaba]
 description: "Alibaba Qwen 팀이 발표한 Qwen3 시리즈를 소개합니다. Thinking/Non-Thinking 모드 통합, Strong-to-Weak Distillation 등 핵심 기여를 정리합니다."
 bilingual: true

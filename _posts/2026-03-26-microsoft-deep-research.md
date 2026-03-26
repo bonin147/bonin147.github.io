@@ -4,6 +4,7 @@ title: "마이크로소프트(MSFT) 기관 리서치 심층 합성 리포트"
 title_en: "Microsoft (MSFT) Institutional Research Deep Synthesis Report"
 date: 2026-03-26
 categories: [Stock]
+subcategory: "Stock Report"
 tags: [Microsoft, MSFT, AI, Azure, Stock]
 description: "마이크로소프트에 대한 최근 6-12개월 주요 IB/리서치하우스의 리서치를 종합 분석합니다."
 bilingual: true

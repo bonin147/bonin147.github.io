@@ -4,6 +4,7 @@ title: "코스피(KOSPI) 매도 리포트: 금리 인상 전망과 메모리 반
 title_en: "KOSPI Sell Report: Rate Hike Outlook and Memory Semiconductor Headwinds"
 date: 2026-03-26
 categories: [Stock]
+subcategory: "Index Report"
 tags: [KOSPI, Korea, Samsung, SKHynix, Memory, Stock]
 bilingual: true
 ---

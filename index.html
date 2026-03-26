@@ -11,11 +11,35 @@ title: Home
   Exploring topics in NLP (LLM, VLM), RAG, and RLHF.
 </p>
 
+<div class="filter-tabs">
+  <button class="filter-tab active" data-filter="all">
+    <span class="lang-ko">전체</span>
+    <span class="lang-en">All</span>
+  </button>
+  <button class="filter-tab" data-filter="Paper Review">
+    <span class="lang-ko">Paper Review</span>
+    <span class="lang-en">Paper Review</span>
+  </button>
+  <button class="filter-tab" data-filter="Stock Report">
+    <span class="lang-ko">Stock Report</span>
+    <span class="lang-en">Stock Report</span>
+  </button>
+  <button class="filter-tab" data-filter="Index Report">
+    <span class="lang-ko">Index Report</span>
+    <span class="lang-en">Index Report</span>
+  </button>
+</div>
+
 <ul class="post-list">
   {% for post in site.posts %}
-  <li class="post-item">
-    <div class="post-meta">
-      {{ post.date | date: "%Y &middot; %m &middot; %d" }}
+  <li class="post-item" data-subcategory="{{ post.subcategory }}">
+    <div class="post-item-header">
+      <div class="post-meta">
+        {{ post.date | date: "%Y &middot; %m &middot; %d" }}
+      </div>
+      {% if post.subcategory %}
+      <span class="subcategory-badge subcategory-{{ post.subcategory | slugify }}">{{ post.subcategory }}</span>
+      {% endif %}
     </div>
     {% if post.tags.size > 0 %}
     <div class="post-tags">
@@ -33,3 +57,20 @@ title: Home
   </li>
   {% endfor %}
 </ul>
+
+<script>
+document.querySelectorAll('.filter-tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.filter-tab').forEach(function(t) { t.classList.remove('active'); });
+    this.classList.add('active');
+    var filter = this.dataset.filter;
+    document.querySelectorAll('.post-item').forEach(function(item) {
+      if (filter === 'all' || item.dataset.subcategory === filter) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+</script>

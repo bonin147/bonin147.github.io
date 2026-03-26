@@ -4,6 +4,7 @@ title: "메타(META) 기관 리서치 심층 합성 리포트"
 title_en: "Meta Platforms (META) Institutional Research Deep Synthesis Report"
 date: 2026-03-26
 categories: [Stock]
+subcategory: "Stock Report"
 tags: [Meta, META, AI, Advertising, Stock]
 description: "메타 플랫폼즈에 대한 최근 6-12개월 주요 IB/리서치하우스의 리서치를 종합 분석합니다."
 bilingual: true
