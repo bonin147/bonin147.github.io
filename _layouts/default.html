@@ -40,9 +40,9 @@
             <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.subcategory_filter %}class="active"{% endif %} data-i18n="posts">Posts</a></li>
             {% if page.url == '/' or page.subcategory_filter %}
             <ul class="sidebar-sub-list">
-              <li><a href="{{ '/posts/paper-review/' | relative_url }}"><span class="lang-ko">논문 리뷰</span><span class="lang-en">Paper Review</span></a></li>
-              <li><a href="{{ '/posts/stock-report/' | relative_url }}"><span class="lang-ko">주식 리포트</span><span class="lang-en">Stock Report</span></a></li>
-              <li><a href="{{ '/posts/index-report/' | relative_url }}"><span class="lang-ko">지수 리포트</span><span class="lang-en">Index Report</span></a></li>
+              <li><a href="{{ '/posts/paper-review/' | relative_url }}" {% if page.subcategory_filter == 'Paper Review' %}class="active"{% endif %}><span class="lang-ko">논문 리뷰</span><span class="lang-en">Paper Review</span></a></li>
+              <li><a href="{{ '/posts/stock-report/' | relative_url }}" {% if page.subcategory_filter == 'Stock Report' %}class="active"{% endif %}><span class="lang-ko">주식 리포트</span><span class="lang-en">Stock Report</span></a></li>
+              <li><a href="{{ '/posts/index-report/' | relative_url }}" {% if page.subcategory_filter == 'Index Report' %}class="active"{% endif %}><span class="lang-ko">지수 리포트</span><span class="lang-en">Index Report</span></a></li>
             </ul>
             {% endif %}
             <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %} data-i18n="about">About / CV</a></li>
