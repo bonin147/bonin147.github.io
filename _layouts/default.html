@@ -160,6 +160,16 @@
     (function() {
       var lang = localStorage.getItem('lang') || 'en';
       applyGlobalLang(lang);
+
+      /* Wrap tables in scrollable container for mobile */
+      document.querySelectorAll('.post-content table').forEach(function(table) {
+        if (!table.parentElement.classList.contains('table-wrapper')) {
+          var wrapper = document.createElement('div');
+          wrapper.className = 'table-wrapper';
+          table.parentNode.insertBefore(wrapper, table);
+          wrapper.appendChild(table);
+        }
+      });
     })();
 
     /* Sidebar TOC for posts */

@@ -563,11 +563,17 @@ a:hover {
   color: var(--text-secondary);
 }
 
+.post-content .table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+}
+
 .post-content table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
   font-size: 0.9rem;
+  min-width: 400px;
 }
 
 .post-content th,
