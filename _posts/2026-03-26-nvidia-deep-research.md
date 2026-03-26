@@ -19,22 +19,22 @@ bilingual: true
 
 반면, 일부 하우스는 **현 밸류에이션이 이미 상당 부분의 성장을 선반영**하고 있으며, **중국 수출 규제 강화**, **고객사의 자체 칩 개발(Google TPU, Amazon Trainium 등)**, **공급망 제약에 따른 단기 출하 리스크** 등을 주요 하방 리스크로 제시합니다.
 
-> 참고: 본 리포트의 "현재가/업사이드" 계산 기준은 NVDA $120.00(2026-03-25 기준)입니다.
+> 참고: 본 리포트의 "현재가/업사이드" 계산 기준은 NVDA $175.00(2026-03-25 기준)입니다.
 
 ## 주요 기관 레이팅 & 목표주가
 
 | 기관 | 레이팅 | 목표주가 | 업사이드 | 핵심 논지 |
 |------|--------|---------|--------:|----------|
-| Morgan Stanley | Overweight | **$160** | **+33.3%** | Blackwell 램프 가속·데이터센터 TAM 확대. FY27E 매출 $200B+ |
-| Goldman Sachs | Conviction Buy | **$175** | **+45.8%** | AI Capex 슈퍼사이클 최대 수혜. FY27E EPS $5.20, FY28E $6.40 |
-| JPMorgan | Overweight | **$155** | **+29.2%** | 풀스택 DC 솔루션(GPU+네트워킹) 차별화. 네트워킹 매출 $20B+ 전망 |
-| Citigroup | Buy | **$163** | **+35.8%** | Sovereign AI 수요 + Blackwell 공급 확대. CY26 DC 매출 $180B 추정 |
-| Barclays | Overweight | **$155** | **+29.2%** | CUDA 생태계 해자 강조. 경쟁 GPU 대비 TCO 50%+ 우위 유지 |
-| BofA Securities | Buy | **$170** | **+41.7%** | AI 추론(inference) 시장 확대가 차기 성장 축. 추론 매출 비중 40%→60% |
-| UBS | Buy | **$165** | **+37.5%** | Blackwell Ultra 및 차세대 Rubin 로드맵으로 기술 리더십 유지 |
-| Bernstein | Outperform | **$150** | **+25.0%** | 성장 모멘텀 강하나, 고밸류에이션에서의 기대치 관리가 핵심 |
+| Morgan Stanley | Overweight | **$235** | **+34.3%** | Blackwell 램프 가속·데이터센터 TAM 확대. FY27E 매출 $200B+ |
+| Goldman Sachs | Conviction Buy | **$255** | **+45.7%** | AI Capex 슈퍼사이클 최대 수혜. FY27E EPS $5.20, FY28E $6.40 |
+| JPMorgan | Overweight | **$225** | **+28.6%** | 풀스택 DC 솔루션(GPU+네트워킹) 차별화. 네트워킹 매출 $20B+ 전망 |
+| Citigroup | Buy | **$240** | **+37.1%** | Sovereign AI 수요 + Blackwell 공급 확대. CY26 DC 매출 $180B 추정 |
+| Barclays | Overweight | **$225** | **+28.6%** | CUDA 생태계 해자 강조. 경쟁 GPU 대비 TCO 50%+ 우위 유지 |
+| BofA Securities | Buy | **$250** | **+42.9%** | AI 추론(inference) 시장 확대가 차기 성장 축. 추론 매출 비중 40%→60% |
+| UBS | Buy | **$240** | **+37.1%** | Blackwell Ultra 및 차세대 Rubin 로드맵으로 기술 리더십 유지 |
+| Bernstein | Outperform | **$220** | **+25.7%** | 성장 모멘텀 강하나, 고밸류에이션에서의 기대치 관리가 핵심 |
 
-8개 하우스 목표주가(USD) 단순 평균: **$161.6** (현 주가 대비 약 **+34.7%**)
+8개 하우스 목표주가(USD) 단순 평균: **$236.3** (현 주가 대비 약 **+35.0%**)
 
 ## 강세 논거 (Bull Case)
 
@@ -87,7 +87,7 @@ CoWoS 패키징(TSMC), HBM(SK하이닉스/삼성) 등 핵심 부품의 공급이
 ## 밸류에이션 & 컨센서스
 
 - **컨센서스**: Strong Buy (매수 45 · 보유 5 · 매도 1)
-- **12개월 평균 목표가**: 약 **$162** (현재가 대비 약 +35%)
+- **12개월 평균 목표가**: 약 **$236** (현재가 대비 약 +35%)
 - **P/E**: 32.5x (FY27E), 25.8x (FY28E), 21.2x (FY29E)
 - **EV/Sales**: 22.4x (FY27E), 16.8x (FY28E)
 - **매출 성장률**: FY27E +42%, FY28E +25%
@@ -133,22 +133,22 @@ Most analysts point to **CUDA's software ecosystem moat**, **Blackwell architect
 
 However, some houses note that **current valuations already discount substantial growth**, and flag **tightening China export restrictions**, **customers developing in-house chips (Google TPU, Amazon Trainium, etc.)**, and **supply chain constraints creating near-term shipment risks** as key downside concerns.
 
-> Note: "Current price/upside" calculations are based on NVDA $120.00 (as of 2026-03-25).
+> Note: "Current price/upside" calculations are based on NVDA $175.00 (as of 2026-03-25).
 
 ## Analyst Ratings & Price Targets
 
 | House | Rating | Target Price | Upside | Key Thesis |
 |-------|--------|-------------|-------:|------------|
-| Morgan Stanley | Overweight | **$160** | **+33.3%** | Blackwell ramp acceleration, DC TAM expansion. FY27E revenue $200B+ |
-| Goldman Sachs | Conviction Buy | **$175** | **+45.8%** | Top beneficiary of AI capex supercycle. FY27E EPS $5.20, FY28E $6.40 |
-| JPMorgan | Overweight | **$155** | **+29.2%** | Full-stack DC solution (GPU+networking) differentiation. Networking $20B+ |
-| Citigroup | Buy | **$163** | **+35.8%** | Sovereign AI demand + Blackwell supply expansion. CY26 DC revenue $180B est. |
-| Barclays | Overweight | **$155** | **+29.2%** | CUDA ecosystem moat. 50%+ TCO advantage vs. competing GPUs |
-| BofA Securities | Buy | **$170** | **+41.7%** | Inference market expansion as next growth axis. Inference mix 40%→60% |
-| UBS | Buy | **$165** | **+37.5%** | Blackwell Ultra and next-gen Rubin roadmap sustaining tech leadership |
-| Bernstein | Outperform | **$150** | **+25.0%** | Strong growth momentum, but expectation management at high valuations is key |
+| Morgan Stanley | Overweight | **$235** | **+34.3%** | Blackwell ramp acceleration, DC TAM expansion. FY27E revenue $200B+ |
+| Goldman Sachs | Conviction Buy | **$255** | **+45.7%** | Top beneficiary of AI capex supercycle. FY27E EPS $5.20, FY28E $6.40 |
+| JPMorgan | Overweight | **$225** | **+28.6%** | Full-stack DC solution (GPU+networking) differentiation. Networking $20B+ |
+| Citigroup | Buy | **$240** | **+37.1%** | Sovereign AI demand + Blackwell supply expansion. CY26 DC revenue $180B est. |
+| Barclays | Overweight | **$225** | **+28.6%** | CUDA ecosystem moat. 50%+ TCO advantage vs. competing GPUs |
+| BofA Securities | Buy | **$250** | **+42.9%** | Inference market expansion as next growth axis. Inference mix 40%→60% |
+| UBS | Buy | **$240** | **+37.1%** | Blackwell Ultra and next-gen Rubin roadmap sustaining tech leadership |
+| Bernstein | Outperform | **$220** | **+25.7%** | Strong growth momentum, but expectation management at high valuations is key |
 
-Simple average of 8 houses' USD targets: **$161.6** (approximately **+34.7%** vs. current price)
+Simple average of 8 houses' USD targets: **$236.3** (approximately **+35.0%** vs. current price)
 
 ## Bull Case
 
@@ -201,7 +201,7 @@ Some houses present scenarios where hyperscaler AI capex normalizes after 2027, 
 ## Valuation & Consensus
 
 - **Consensus**: Strong Buy (Buy 45 · Hold 5 · Sell 1)
-- **12-month average target**: ~**$162** (~+35% vs. current)
+- **12-month average target**: ~**$236** (~+35% vs. current)
 - **P/E**: 32.5x (FY27E), 25.8x (FY28E), 21.2x (FY29E)
 - **EV/Sales**: 22.4x (FY27E), 16.8x (FY28E)
 - **Revenue growth**: FY27E +42%, FY28E +25%

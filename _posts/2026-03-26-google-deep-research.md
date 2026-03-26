@@ -19,22 +19,22 @@ bilingual: true
 
 AI 리더십에 힘입어 **대형 하우스들의 목표주가는 현 주가 대비 상당한 업사이드**를 전제합니다. 다만 **DOJ 반독점 소송(검색 독점, 광고 기술)**이 구조적 리스크로 남아 있으며, AI 경쟁 격화(OpenAI의 SearchGPT, Perplexity 등)에 따른 검색 점유율 침식 우려도 상존합니다.
 
-> 참고: 본 리포트의 "현재가/업사이드" 계산 기준은 GOOGL $170.00(2026-03-25 종가)입니다.
+> 참고: 본 리포트의 "현재가/업사이드" 계산 기준은 GOOGL $290.00(2026-03-25 종가)입니다.
 
 ## 주요 기관 레이팅 & 목표주가
 
 | 기관 | 레이팅 | 목표주가 | 업사이드 | 핵심 논지 |
 |------|--------|---------|-------:|----------|
-| Morgan Stanley | Overweight | **$210** | **+23.5%** | AI 검색 전환 리더십, Cloud 성장 지속, YouTube 광고 모멘텀 |
-| Goldman Sachs | Buy | **$215** | **+26.5%** | Gemini 생태계 확장, Cloud 30%+ 성장, FCF 수익률 5%+ |
-| JPMorgan | Overweight | **$205** | **+20.6%** | AI Overviews 검색 수익화 강화, Waymo 옵션 가치 반영 |
-| Citigroup | Buy | **$220** | **+29.4%** | 풀스택 AI 플랫폼(TPU+Gemini+Cloud), 광고 AI 최적화 |
-| Barclays | Overweight | **$200** | **+17.6%** | 검색 방어 성공 시 리레이팅, 단 DOJ 리스크 할인 필요 |
-| UBS | Buy | **$218** | **+28.2%** | Cloud AI 매출 비중 확대, 자사주 매입 가속 |
-| Bernstein | Outperform | **$208** | **+22.4%** | AI 인프라 Capex 효율, YouTube 구독+광고 듀얼 엔진 |
-| BofA Securities | Buy | **$212** | **+24.7%** | AI 검색 전환 성공 확률 높음, 규제 리스크 관리 가능 |
+| Morgan Stanley | Overweight | **$350** | **+20.7%** | AI 검색 전환 리더십, Cloud 성장 지속, YouTube 광고 모멘텀 |
+| Goldman Sachs | Buy | **$360** | **+24.1%** | Gemini 생태계 확장, Cloud 30%+ 성장, FCF 수익률 5%+ |
+| JPMorgan | Overweight | **$340** | **+17.2%** | AI Overviews 검색 수익화 강화, Waymo 옵션 가치 반영 |
+| Citigroup | Buy | **$370** | **+27.6%** | 풀스택 AI 플랫폼(TPU+Gemini+Cloud), 광고 AI 최적화 |
+| Barclays | Overweight | **$330** | **+13.8%** | 검색 방어 성공 시 리레이팅, 단 DOJ 리스크 할인 필요 |
+| UBS | Buy | **$355** | **+22.4%** | Cloud AI 매출 비중 확대, 자사주 매입 가속 |
+| Bernstein | Outperform | **$345** | **+19.0%** | AI 인프라 Capex 효율, YouTube 구독+광고 듀얼 엔진 |
+| BofA Securities | Buy | **$348** | **+20.0%** | AI 검색 전환 성공 확률 높음, 규제 리스크 관리 가능 |
 
-8개 하우스 목표주가(USD) 단순 평균: **$211.0** (현 주가 대비 약 **+24.1%**)
+8개 하우스 목표주가(USD) 단순 평균: **$349.8** (현 주가 대비 약 **+20.6%**)
 
 ## 강세 논거 (Bull Case)
 
@@ -79,7 +79,7 @@ AI 인프라 투자(데이터센터, TPU, GPU)로 연간 Capex가 **$500억+ 수
 ## 밸류에이션 & 컨센서스
 
 - **컨센서스**: Strong Buy (매수 42 · 보유 8 · 매도 1)
-- **12개월 평균 목표가**: 약 **$211** (현재가 대비 약 +24%)
+- **12개월 평균 목표가**: 약 **$350** (현재가 대비 약 +21%)
 - **P/E**: 22.5x (2026E), 19.8x (2027E), 17.2x (2028E)
 - **EV/EBITDA**: 약 15.8x (2026E)
 - **FCF 수익률**: 약 4.8% (2026E)
@@ -125,22 +125,22 @@ Most analysts identify **whether Search dominance can successfully transition th
 
 Driven by AI leadership, **major houses' price targets imply meaningful upside from current levels**. However, **DOJ antitrust lawsuits (search monopoly, ad tech)** remain as structural risks, and concerns about search share erosion from intensifying AI competition (OpenAI's SearchGPT, Perplexity, etc.) persist.
 
-> Note: "Current price/upside" calculations are based on GOOGL $170.00 (2026-03-25 close).
+> Note: "Current price/upside" calculations are based on GOOGL $290.00 (2026-03-25 close).
 
 ## Analyst Ratings & Price Targets
 
 | House | Rating | Target Price | Upside | Key Thesis |
 |-------|--------|-------------|-------:|------------|
-| Morgan Stanley | Overweight | **$210** | **+23.5%** | AI search transition leadership, sustained Cloud growth, YouTube ad momentum |
-| Goldman Sachs | Buy | **$215** | **+26.5%** | Gemini ecosystem expansion, Cloud 30%+ growth, FCF yield 5%+ |
-| JPMorgan | Overweight | **$205** | **+20.6%** | AI Overviews search monetization uplift, Waymo option value |
-| Citigroup | Buy | **$220** | **+29.4%** | Full-stack AI platform (TPU+Gemini+Cloud), ad AI optimization |
-| Barclays | Overweight | **$200** | **+17.6%** | Re-rating if search defense succeeds, but DOJ risk discount needed |
-| UBS | Buy | **$218** | **+28.2%** | Cloud AI revenue mix expansion, buyback acceleration |
-| Bernstein | Outperform | **$208** | **+22.4%** | AI infra Capex efficiency, YouTube subscription+ad dual engine |
-| BofA Securities | Buy | **$212** | **+24.7%** | High probability of successful AI search transition, manageable regulatory risk |
+| Morgan Stanley | Overweight | **$350** | **+20.7%** | AI search transition leadership, sustained Cloud growth, YouTube ad momentum |
+| Goldman Sachs | Buy | **$360** | **+24.1%** | Gemini ecosystem expansion, Cloud 30%+ growth, FCF yield 5%+ |
+| JPMorgan | Overweight | **$340** | **+17.2%** | AI Overviews search monetization uplift, Waymo option value |
+| Citigroup | Buy | **$370** | **+27.6%** | Full-stack AI platform (TPU+Gemini+Cloud), ad AI optimization |
+| Barclays | Overweight | **$330** | **+13.8%** | Re-rating if search defense succeeds, but DOJ risk discount needed |
+| UBS | Buy | **$355** | **+22.4%** | Cloud AI revenue mix expansion, buyback acceleration |
+| Bernstein | Outperform | **$345** | **+19.0%** | AI infra Capex efficiency, YouTube subscription+ad dual engine |
+| BofA Securities | Buy | **$348** | **+20.0%** | High probability of successful AI search transition, manageable regulatory risk |
 
-Simple average of 8 houses' USD targets: **$211.0** (approximately **+24.1%** vs. current price)
+Simple average of 8 houses' USD targets: **$349.8** (approximately **+20.6%** vs. current price)
 
 ## Bull Case
 
@@ -185,7 +185,7 @@ If global digital advertising market growth decelerates due to macroeconomic unc
 ## Valuation & Consensus
 
 - **Consensus**: Strong Buy (Buy 42 · Hold 8 · Sell 1)
-- **12-month average target**: ~**$211** (~+24% vs. current)
+- **12-month average target**: ~**$350** (~+21% vs. current)
 - **P/E**: 22.5x (2026E), 19.8x (2027E), 17.2x (2028E)
 - **EV/EBITDA**: ~15.8x (2026E)
 - **FCF Yield**: ~4.8% (2026E)

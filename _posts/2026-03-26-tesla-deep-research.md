@@ -15,26 +15,26 @@ bilingual: true
 
 테슬라에 대한 최근 6–12개월 주요 IB/리서치하우스의 공통된 프레임은 "**FSD(완전자율주행)·로보택시의 수익화 타임라인 vs. EV 가격 인하에 따른 마진 압박과 경쟁 심화**"의 줄다리기입니다. 한편으로는 FSD 기술 진보, 신규 저가 모델 출시, 에너지 저장(Megapack) 사업의 고성장, Optimus 휴머노이드 로봇의 장기 옵셔널리티 등 **미래 성장 동력에 대한 기대**가 높습니다. 반면, **EV 시장 경쟁 격화(특히 BYD 등 중국 업체), 반복적인 가격 인하로 인한 자동차 마진 하락, 일론 머스크의 DOGE/정치적 리스크** 등이 단기 실적과 밸류에이션에 부담을 주고 있습니다.
 
-특히 주목할 점은 **애널리스트 목표주가의 범위가 극도로 넓다**는 것입니다. 가장 낙관적인 하우스는 $400 이상을, 가장 보수적인 하우스는 $125 수준을 제시하고 있으며, 이는 FSD/로보택시·Optimus 등 **아직 수익화되지 않은 사업에 대한 밸류에이션 격차**에서 비롯됩니다. 테슬라는 단순 자동차 회사로 볼 것인가, AI/로보틱스 플랫폼으로 볼 것인가에 따라 완전히 다른 밸류에이션이 나오는 종목입니다.
+특히 주목할 점은 **애널리스트 목표주가의 범위가 극도로 넓다**는 것입니다. 가장 낙관적인 하우스는 $600 이상을, 가장 보수적인 하우스는 $175 수준을 제시하고 있으며, 이는 FSD/로보택시·Optimus 등 **아직 수익화되지 않은 사업에 대한 밸류에이션 격차**에서 비롯됩니다. 테슬라는 단순 자동차 회사로 볼 것인가, AI/로보틱스 플랫폼으로 볼 것인가에 따라 완전히 다른 밸류에이션이 나오는 종목입니다.
 
-> 참고: 본 리포트의 "현재가/업사이드" 계산 기준은 TSLA $275 (2026-03-25 기준)입니다.
+> 참고: 본 리포트의 "현재가/업사이드" 계산 기준은 TSLA $385 (2026-03-25 기준)입니다.
 
 ## 주요 기관 레이팅 & 목표주가
 
 | 기관 | 레이팅 | 목표주가 | 업사이드 | 핵심 논지 |
 |------|--------|---------|--------:|----------|
-| Morgan Stanley | Overweight | **$430** | **+56.4%** | FSD/로보택시·에너지·AI 플랫폼 가치 반영. 네트워크 서비스 수익 모델 |
-| Goldman Sachs | Buy | **$345** | **+25.5%** | 신규 저가 모델 출시 + Megapack 성장. 자동차 외 수익 다각화 |
-| JPMorgan | Underweight | **$135** | **-50.9%** | 자동차 펀더멘털 대비 과도한 밸류에이션. EV 경쟁 심화 우려 |
-| Citigroup | Neutral | **$255** | **-7.3%** | FSD 진전은 인정하나 실행 리스크와 밸류에이션 부담 |
-| Barclays | Overweight | **$370** | **+34.5%** | FSD 라이선싱 및 로보택시 TAM 강조. 에너지 사업 재평가 |
-| Bernstein | Underperform | **$125** | **-54.5%** | 자동차 마진 구조적 하락. 경쟁 심화. 프리미엄 밸류에이션 정당화 어려움 |
-| Deutsche Bank | Buy | **$370** | **+34.5%** | Megapack + FSD 수익화 조합. 2026년 저가 모델이 볼륨 핵심 |
-| UBS | Neutral | **$260** | **-5.5%** | 에너지·FSD 성장 긍정적이나, 자동차 마진 역풍과 머스크 리스크 상존 |
+| Morgan Stanley | Overweight | **$600** | **+55.8%** | FSD/로보택시·에너지·AI 플랫폼 가치 반영. 네트워크 서비스 수익 모델 |
+| Goldman Sachs | Buy | **$485** | **+26.0%** | 신규 저가 모델 출시 + Megapack 성장. 자동차 외 수익 다각화 |
+| JPMorgan | Underweight | **$190** | **-50.6%** | 자동차 펀더멘털 대비 과도한 밸류에이션. EV 경쟁 심화 우려 |
+| Citigroup | Neutral | **$355** | **-7.8%** | FSD 진전은 인정하나 실행 리스크와 밸류에이션 부담 |
+| Barclays | Overweight | **$520** | **+35.1%** | FSD 라이선싱 및 로보택시 TAM 강조. 에너지 사업 재평가 |
+| Bernstein | Underperform | **$175** | **-54.5%** | 자동차 마진 구조적 하락. 경쟁 심화. 프리미엄 밸류에이션 정당화 어려움 |
+| Deutsche Bank | Buy | **$520** | **+35.1%** | Megapack + FSD 수익화 조합. 2026년 저가 모델이 볼륨 핵심 |
+| UBS | Neutral | **$365** | **-5.2%** | 에너지·FSD 성장 긍정적이나, 자동차 마진 역풍과 머스크 리스크 상존 |
 
-8개 하우스 목표주가(USD) 단순 평균: **$286.3** (현 주가 대비 약 **+4.1%**)
+8개 하우스 목표주가(USD) 단순 평균: **$401.3** (현 주가 대비 약 **+4.2%**)
 
-**최고 목표가 $430 vs. 최저 목표가 $125 — 스프레드 $305(약 2.2배)**로, 메가캡 종목 중 가장 넓은 목표가 범위를 보이고 있습니다.
+**최고 목표가 $600 vs. 최저 목표가 $175 — 스프레드 $425(약 3.4배)**로, 메가캡 종목 중 가장 넓은 목표가 범위를 보이고 있습니다.
 
 ## 강세 논거 (Bull Case)
 
@@ -83,8 +83,8 @@ BYD는 2025년 글로벌 EV 판매에서 테슬라를 넘어설 가능성이 대
 ## 밸류에이션 & 컨센서스
 
 - **컨센서스**: Hold (매수 18 · 보유 12 · 매도 8)
-- **12개월 평균 목표가**: 약 **$286** (현재가 대비 약 +4%)
-- **12개월 목표가 범위**: **$125 ~ $430**
+- **12개월 평균 목표가**: 약 **$401** (현재가 대비 약 +4%)
+- **12개월 목표가 범위**: **$175 ~ $600**
 - **Forward P/E**: 약 105x (2026E), 약 75x (2027E)
 - **EV/EBITDA**: 약 55x (2026E)
 - **EV/Revenue**: 약 8.5x (2026E)
@@ -103,7 +103,7 @@ BYD는 2025년 글로벌 EV 판매에서 테슬라를 넘어설 가능성이 대
 
 현 시점의 테슬라는 **"FSD/로보택시·에너지·로봇이라는 거대한 성장 옵션"**을 보유한 반면, **"자동차 마진 하락·경쟁 심화·정치적 리스크라는 현실적 역풍"**을 동시에 맞고 있습니다.
 
-목표주가 스프레드가 $125~$430으로 극도로 넓은 이유:
+목표주가 스프레드가 $175~$600으로 극도로 넓은 이유:
 - **Bull**: FSD·로보택시·에너지·Optimus의 TAM을 DCF에 반영하면 현 주가도 저평가
 - **Bear**: 자동차 사업 펀더멘털만으로는 Forward P/E 100x+ 정당화 불가
 
@@ -124,26 +124,26 @@ BYD는 2025년 글로벌 EV 판매에서 테슬라를 넘어설 가능성이 대
 
 The consensus framework from major IBs/research houses over the past 6–12 months on Tesla is a tug-of-war between **"FSD (Full Self-Driving)/robotaxi monetization timeline vs. margin pressure from EV price cuts and intensifying competition."** On one hand, expectations for **future growth drivers** are high — FSD technology advances, new affordable model launches, rapid Energy Storage (Megapack) business growth, and long-term Optimus humanoid robot optionality. On the other hand, **intensifying EV market competition (especially Chinese players like BYD), recurring price cuts eroding automotive margins, and Elon Musk's DOGE/political risk** are weighing on near-term earnings and valuation.
 
-Most notably, **the range of analyst price targets is extremely wide**. The most bullish house targets above $400 while the most bearish targets around $125 — a spread reflecting the **valuation gap for businesses not yet monetized**, such as FSD/robotaxi and Optimus. Tesla is a stock where entirely different valuations emerge depending on whether you view it as a pure automaker or an AI/robotics platform.
+Most notably, **the range of analyst price targets is extremely wide**. The most bullish house targets above $600 while the most bearish targets around $175 — a spread reflecting the **valuation gap for businesses not yet monetized**, such as FSD/robotaxi and Optimus. Tesla is a stock where entirely different valuations emerge depending on whether you view it as a pure automaker or an AI/robotics platform.
 
-> Note: "Current price/upside" calculations are based on TSLA $275 (as of 2026-03-25).
+> Note: "Current price/upside" calculations are based on TSLA $385 (as of 2026-03-25).
 
 ## Analyst Ratings & Price Targets
 
 | House | Rating | Target Price | Upside | Key Thesis |
 |-------|--------|-------------|-------:|------------|
-| Morgan Stanley | Overweight | **$430** | **+56.4%** | FSD/robotaxi, energy, AI platform value. Network services revenue model |
-| Goldman Sachs | Buy | **$345** | **+25.5%** | New affordable model launch + Megapack growth. Revenue diversification beyond auto |
-| JPMorgan | Underweight | **$135** | **-50.9%** | Excessive valuation vs. auto fundamentals. EV competition concerns |
-| Citigroup | Neutral | **$255** | **-7.3%** | Acknowledges FSD progress but execution risk and valuation burden |
-| Barclays | Overweight | **$370** | **+34.5%** | FSD licensing and robotaxi TAM emphasis. Energy business re-rating |
-| Bernstein | Underperform | **$125** | **-54.5%** | Structural auto margin decline. Competition intensifying. Premium valuation unjustifiable |
-| Deutsche Bank | Buy | **$370** | **+34.5%** | Megapack + FSD monetization combination. Affordable model key to 2026 volume |
-| UBS | Neutral | **$260** | **-5.5%** | Energy/FSD growth positive, but auto margin headwinds and Musk risk persist |
+| Morgan Stanley | Overweight | **$600** | **+55.8%** | FSD/robotaxi, energy, AI platform value. Network services revenue model |
+| Goldman Sachs | Buy | **$485** | **+26.0%** | New affordable model launch + Megapack growth. Revenue diversification beyond auto |
+| JPMorgan | Underweight | **$190** | **-50.6%** | Excessive valuation vs. auto fundamentals. EV competition concerns |
+| Citigroup | Neutral | **$355** | **-7.8%** | Acknowledges FSD progress but execution risk and valuation burden |
+| Barclays | Overweight | **$520** | **+35.1%** | FSD licensing and robotaxi TAM emphasis. Energy business re-rating |
+| Bernstein | Underperform | **$175** | **-54.5%** | Structural auto margin decline. Competition intensifying. Premium valuation unjustifiable |
+| Deutsche Bank | Buy | **$520** | **+35.1%** | Megapack + FSD monetization combination. Affordable model key to 2026 volume |
+| UBS | Neutral | **$365** | **-5.2%** | Energy/FSD growth positive, but auto margin headwinds and Musk risk persist |
 
-Simple average of 8 houses' USD targets: **$286.3** (approximately **+4.1%** vs. current price)
+Simple average of 8 houses' USD targets: **$401.3** (approximately **+4.2%** vs. current price)
 
-**Highest target $430 vs. lowest target $125 — a $305 spread (~2.2x)**, the widest target range among mega-cap stocks.
+**Highest target $600 vs. lowest target $175 — a $425 spread (~3.4x)**, the widest target range among mega-cap stocks.
 
 ## Bull Case
 
@@ -192,8 +192,8 @@ TSLA currently trades at Forward P/E of 100x+, representing a **5–10x premium*
 ## Valuation & Consensus
 
 - **Consensus**: Hold (Buy 18 · Hold 12 · Sell 8)
-- **12-month average target**: ~**$286** (~+4% vs. current)
-- **12-month target range**: **$125 – $430**
+- **12-month average target**: ~**$401** (~+4% vs. current)
+- **12-month target range**: **$175 – $600**
 - **Forward P/E**: ~105x (2026E), ~75x (2027E)
 - **EV/EBITDA**: ~55x (2026E)
 - **EV/Revenue**: ~8.5x (2026E)
@@ -212,7 +212,7 @@ TSLA currently trades at Forward P/E of 100x+, representing a **5–10x premium*
 
 Tesla currently holds **"massive growth options in FSD/robotaxi, energy, and robotics"** while simultaneously facing **"real-world headwinds of declining auto margins, intensifying competition, and political risk."**
 
-Why the target price spread is extremely wide ($125–$430):
+Why the target price spread is extremely wide ($175–$600):
 - **Bull**: Incorporating FSD, robotaxi, energy, and Optimus TAM into DCF suggests current price is still undervalued
 - **Bear**: Automotive fundamentals alone cannot justify Forward P/E of 100x+
 
