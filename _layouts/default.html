@@ -108,6 +108,12 @@
 
   <button class="scroll-top-btn" id="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
 
+  <!-- Image Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img class="lightbox-img" id="lightbox-img" alt="">
+  </div>
+
   <script>
     /* Dark mode */
     function toggleTheme() {
@@ -266,6 +272,35 @@
       if (!btn) return;
       window.addEventListener('scroll', function() {
         btn.classList.toggle('visible', window.scrollY > 400);
+      });
+    })();
+
+    /* Image lightbox */
+    function openLightbox(src) {
+      var lb = document.getElementById('lightbox');
+      var img = document.getElementById('lightbox-img');
+      img.src = src;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      var lb = document.getElementById('lightbox');
+      lb.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    (function() {
+      document.querySelectorAll('.post-content img').forEach(function(img) {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function(e) {
+          e.stopPropagation();
+          openLightbox(this.src);
+        });
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
       });
     })();
   </script>
