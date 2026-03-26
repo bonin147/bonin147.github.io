@@ -84,7 +84,7 @@ $$\pi_{\text{mix}}(y \mid x) = \lambda \pi_\theta(y \mid x) + (1-\lambda)\pi_{\t
 
 ### 이론적 보장
 
-**Theorem 1.** BDPO loss를 최소화하는 최적 정책 {::nomarkdown}\(\pi^{\*}\){:/nomarkdown}는 {::nomarkdown}\(\pi^{\*}(y_w \mid x) = 1\){:/nomarkdown}, {::nomarkdown}\(\pi^{\*}(y_l \mid x) = 0\){:/nomarkdown}을 만족한다. 즉, **이상적인 preference alignment에 수렴**한다.
+**Theorem 1.** BDPO loss를 최소화하는 최적 정책 {::nomarkdown}\(\pi^{*}\){:/nomarkdown}는 {::nomarkdown}\(\pi^{*}(y_w \mid x) = 1\){:/nomarkdown}, {::nomarkdown}\(\pi^{*}(y_l \mid x) = 0\){:/nomarkdown}을 만족한다. 즉, **이상적인 preference alignment에 수렴**한다.
 
 **Theorem 2.** 학습 과정에서 chosen response의 확률에 대한 lower bound가 보장된다:
 
@@ -242,7 +242,7 @@ This lower-bounds the denominator by {::nomarkdown}\((1-\lambda)\pi_{\text{ref}}
 
 ### Theoretical Guarantees
 
-**Theorem 1.** The optimal policy {::nomarkdown}\(\pi^{\*}\){:/nomarkdown} minimizing the BDPO loss satisfies {::nomarkdown}\(\pi^{\*}(y_w \mid x) = 1\){:/nomarkdown} and {::nomarkdown}\(\pi^{\*}(y_l \mid x) = 0\){:/nomarkdown} — it **converges to ideal preference alignment**.
+**Theorem 1.** The optimal policy {::nomarkdown}\(\pi^{*}\){:/nomarkdown} minimizing the BDPO loss satisfies {::nomarkdown}\(\pi^{*}(y_w \mid x) = 1\){:/nomarkdown} and {::nomarkdown}\(\pi^{*}(y_l \mid x) = 0\){:/nomarkdown} — it **converges to ideal preference alignment**.
 
 **Theorem 2.** During training, a lower bound on the chosen response probability is guaranteed:
 
