@@ -583,6 +583,26 @@ html.dark .subcategory-index-report {
   border-bottom: 1px solid var(--border);
 }
 
+.paper-link-banner {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.88rem;
+}
+
+.paper-link-banner a {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.paper-link-banner a:hover {
+  text-decoration: underline;
+}
+
 .post-title {
   font-family: var(--font-serif);
   font-size: 1.8rem;

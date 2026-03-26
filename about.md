@@ -65,27 +65,27 @@ permalink: /about/
 <h2>논문</h2>
 
 <div class="pub-item">
-  <div class="pub-title"><a href="https://arxiv.org/abs/2509.21865" target="_blank">Beyond RAG vs. Long-Context: Learning Distraction-Aware Retrieval for Efficient Knowledge Grounding</a></div>
+  <div class="pub-title"><a href="{{ '/2026/01/17/beyond-rag-long-context/' | relative_url }}">Beyond RAG vs. Long-Context: Learning Distraction-Aware Retrieval for Efficient Knowledge Grounding</a></div>
   <div class="pub-authors">Seong-Woong Shim, Myunsoo Kim, <strong>Jae Hyeon Cho</strong>, Byungjun Lee</div>
   <div class="pub-venue">ICLR, 2026</div>
 </div>
 
 <div class="pub-item">
-  <div class="pub-title"><a href="https://aclanthology.org/2025.acl-long.1039/" target="_blank">K/DA: Automated Data Generation Pipeline for Detoxifying Implicitly Offensive Language in Korean</a></div>
+  <div class="pub-title"><a href="{{ '/2025/07/27/kda-korean-detoxification/' | relative_url }}">K/DA: Automated Data Generation Pipeline for Detoxifying Implicitly Offensive Language in Korean</a></div>
   <div class="pub-authors">Minkyeong Jeon*, Hyemin Jeong*, Yerang Kim, Jiyoung Kim, <strong>Jae Hyeon Cho</strong>, Byung-Jun Lee</div>
-  <div class="pub-venue">ACL, 2025 · <a href="https://arxiv.org/abs/2506.13513" target="_blank">arXiv</a></div>
+  <div class="pub-venue">ACL, 2025</div>
 </div>
 
 <div class="pub-item">
-  <div class="pub-title"><a href="https://aclanthology.org/2025.findings-emnlp.433/" target="_blank">Rethinking DPO: The Role of Rejected Responses in Preference Misalignment</a></div>
+  <div class="pub-title"><a href="{{ '/2025/10/12/rethinking-dpo/' | relative_url }}">Rethinking DPO: The Role of Rejected Responses in Preference Misalignment</a></div>
   <div class="pub-authors"><strong>Jae Hyeon Cho</strong>, JunHyeok Oh, Myunsoo Kim, Byung-Jun Lee</div>
-  <div class="pub-venue">Findings of EMNLP, 2025 · <a href="https://arxiv.org/abs/2506.12725" target="_blank">arXiv</a></div>
+  <div class="pub-venue">Findings of EMNLP, 2025</div>
 </div>
 
 <div class="pub-item">
-  <div class="pub-title"><a href="https://direct.mit.edu/coli/article/doi/10.1162/COLI.a.579/133943/VPO-Leveraging-the-Number-of-Votes-in-Preference" target="_blank">VPO: Leveraging the Number of Votes in Preference Optimization</a></div>
+  <div class="pub-title"><a href="{{ '/2025/06/15/vpo-votes-preference/' | relative_url }}">VPO: Leveraging the Number of Votes in Preference Optimization</a></div>
   <div class="pub-authors"><strong>Jae Hyeon Cho</strong>, Minkyung Park, Byungjun Lee</div>
-  <div class="pub-venue">Computational Linguistics, 2025 · <a href="https://arxiv.org/abs/2410.22891" target="_blank">arXiv</a></div>
+  <div class="pub-venue">Computational Linguistics, 2025</div>
 </div>
 
 <p style="margin-top:1rem;"><a href="{{ '/publications/' | relative_url }}">전체 목록 →</a></p>
@@ -209,27 +209,27 @@ permalink: /about/
 <h2>Publications</h2>
 
 <div class="pub-item">
-  <div class="pub-title"><a href="https://arxiv.org/abs/2509.21865" target="_blank">Beyond RAG vs. Long-Context: Learning Distraction-Aware Retrieval for Efficient Knowledge Grounding</a></div>
+  <div class="pub-title"><a href="{{ '/2026/01/17/beyond-rag-long-context/' | relative_url }}">Beyond RAG vs. Long-Context: Learning Distraction-Aware Retrieval for Efficient Knowledge Grounding</a></div>
   <div class="pub-authors">Seong-Woong Shim, Myunsoo Kim, <strong>Jae Hyeon Cho</strong>, Byungjun Lee</div>
   <div class="pub-venue">ICLR, 2026</div>
 </div>
 
 <div class="pub-item">
-  <div class="pub-title"><a href="https://aclanthology.org/2025.acl-long.1039/" target="_blank">K/DA: Automated Data Generation Pipeline for Detoxifying Implicitly Offensive Language in Korean</a></div>
+  <div class="pub-title"><a href="{{ '/2025/07/27/kda-korean-detoxification/' | relative_url }}">K/DA: Automated Data Generation Pipeline for Detoxifying Implicitly Offensive Language in Korean</a></div>
   <div class="pub-authors">Minkyeong Jeon*, Hyemin Jeong*, Yerang Kim, Jiyoung Kim, <strong>Jae Hyeon Cho</strong>, Byung-Jun Lee</div>
-  <div class="pub-venue">ACL, 2025 · <a href="https://arxiv.org/abs/2506.13513" target="_blank">arXiv</a></div>
+  <div class="pub-venue">ACL, 2025</div>
 </div>
 
 <div class="pub-item">
-  <div class="pub-title"><a href="https://aclanthology.org/2025.findings-emnlp.433/" target="_blank">Rethinking DPO: The Role of Rejected Responses in Preference Misalignment</a></div>
+  <div class="pub-title"><a href="{{ '/2025/10/12/rethinking-dpo/' | relative_url }}">Rethinking DPO: The Role of Rejected Responses in Preference Misalignment</a></div>
   <div class="pub-authors"><strong>Jae Hyeon Cho</strong>, JunHyeok Oh, Myunsoo Kim, Byung-Jun Lee</div>
-  <div class="pub-venue">Findings of EMNLP, 2025 · <a href="https://arxiv.org/abs/2506.12725" target="_blank">arXiv</a></div>
+  <div class="pub-venue">Findings of EMNLP, 2025</div>
 </div>
 
 <div class="pub-item">
-  <div class="pub-title"><a href="https://direct.mit.edu/coli/article/doi/10.1162/COLI.a.579/133943/VPO-Leveraging-the-Number-of-Votes-in-Preference" target="_blank">VPO: Leveraging the Number of Votes in Preference Optimization</a></div>
+  <div class="pub-title"><a href="{{ '/2025/06/15/vpo-votes-preference/' | relative_url }}">VPO: Leveraging the Number of Votes in Preference Optimization</a></div>
   <div class="pub-authors"><strong>Jae Hyeon Cho</strong>, Minkyung Park, Byungjun Lee</div>
-  <div class="pub-venue">Computational Linguistics, 2025 · <a href="https://arxiv.org/abs/2410.22891" target="_blank">arXiv</a></div>
+  <div class="pub-venue">Computational Linguistics, 2025</div>
 </div>
 
 <p style="margin-top:1rem;"><a href="{{ '/publications/' | relative_url }}">Full list →</a></p>
