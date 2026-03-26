@@ -38,6 +38,13 @@
           <div class="sidebar-section-title" data-i18n="pages">Pages</div>
           <ul class="sidebar-pages">
             <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %} data-i18n="posts">Posts</a></li>
+            {% if page.url == '/' or page.subcategory_filter %}
+            <ul class="sidebar-sub-list">
+              <li><a href="{{ '/posts/paper-review/' | relative_url }}" {% if page.subcategory_filter == 'Paper Review' %}class="active"{% endif %}>Paper Review</a></li>
+              <li><a href="{{ '/posts/stock-report/' | relative_url }}" {% if page.subcategory_filter == 'Stock Report' %}class="active"{% endif %}>Stock Report</a></li>
+              <li><a href="{{ '/posts/index-report/' | relative_url }}" {% if page.subcategory_filter == 'Index Report' %}class="active"{% endif %}>Index Report</a></li>
+            </ul>
+            {% endif %}
             <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %} data-i18n="about">About / CV</a></li>
             <li><a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}class="active"{% endif %} data-i18n="publications">Publications</a></li>
             <li><a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}class="active"{% endif %} data-i18n="projects">Projects</a></li>

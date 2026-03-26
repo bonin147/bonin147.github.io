@@ -1,0 +1,35 @@
+---
+layout: default
+title: "Stock Report"
+permalink: /posts/stock-report/
+subcategory_filter: "Stock Report"
+---
+<div class="page-label">Stock Report</div>
+<h1 class="page-heading">Stock Report</h1>
+
+<ul class="post-list">
+  {% assign filtered = site.posts | where: "subcategory", "Stock Report" %}
+  {% for post in filtered %}
+  <li class="post-item">
+    <div class="post-item-header">
+      <div class="post-meta">
+        {{ post.date | date: "%Y &middot; %m &middot; %d" }}
+      </div>
+      <span class="subcategory-badge subcategory-stock-report">Stock Report</span>
+    </div>
+    {% if post.tags.size > 0 %}
+    <div class="post-tags">
+      {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+    </div>
+    {% endif %}
+    {% if post.title_en %}
+    <h2 class="lang-ko"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <h2 class="lang-en"><a href="{{ post.url | relative_url }}">{{ post.title_en }}</a></h2>
+    {% else %}
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {% endif %}
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+    <a href="{{ post.url | relative_url }}" class="post-read" data-i18n="read">READ →</a>
+  </li>
+  {% endfor %}
+</ul>
