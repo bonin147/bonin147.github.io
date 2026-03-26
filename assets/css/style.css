@@ -563,6 +563,25 @@ a:hover {
   color: var(--text-secondary);
 }
 
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.post-content th,
+.post-content td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.post-content th {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
 .post-content img {
   max-width: 100%;
   border-radius: 4px;

@@ -130,16 +130,25 @@
         if (strings[key]) el.textContent = strings[key];
       });
 
-      /* Update bilingual content OUTSIDE post content (sidebar, pages, post-nav) */
+      /* Update ALL bilingual content (sidebar, pages, AND posts) */
       document.querySelectorAll('.lang-ko, .lang-en').forEach(function(el) {
-        if (!el.closest('.post-content') && !el.closest('.post-header')) {
-          el.style.display = 'none';
-        }
+        el.style.display = 'none';
       });
       document.querySelectorAll('.lang-' + lang).forEach(function(el) {
-        if (!el.closest('.post-content') && !el.closest('.post-header')) {
-          el.style.display = 'block';
-        }
+        el.style.display = 'block';
+      });
+
+      /* Update post title if bilingual */
+      var titleKo = document.querySelector('.post-title-ko');
+      var titleEn = document.querySelector('.post-title-en');
+      if (titleKo && titleEn) {
+        titleKo.style.display = lang === 'ko' ? 'block' : 'none';
+        titleEn.style.display = lang === 'en' ? 'block' : 'none';
+      }
+
+      /* Sync per-post toggle buttons */
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
       });
 
       document.documentElement.setAttribute('lang', lang);
