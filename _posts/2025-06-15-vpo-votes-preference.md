@@ -5,7 +5,7 @@ title_en: "VPO: Leveraging the Number of Votes in Preference Optimization"
 date: 2025-06-15
 categories: [NLP]
 subcategory: "Paper Review"
-tags: [Preference-Optimization, RLHF, DPO, Voting, Computational-Linguistics]
+tags: [My-Paper, Preference-Optimization, RLHF, DPO, Voting, Computational-Linguistics]
 description: "Preference 데이터의 투표 수 정보를 활용하여 더 정교한 preference optimization을 달성합니다."
 bilingual: true
 paper_url: "https://direct.mit.edu/coli/article/doi/10.1162/COLI.a.579/133943/VPO-Leveraging-the-Number-of-Votes-in-Preference"
@@ -15,10 +15,6 @@ paper_authors: "Jae Hyeon Cho, Minkyung Park, Byungjun Lee"
 ---
 
 <div class="lang-ko" markdown="1">
-
-> **추천 점수: 5 / 5 (Strong Recommend)**
->
-> *"3:2로 이긴 것"과 "5:0으로 이긴 것"이 같을 수 없다 — 투표 수에 담긴 preference 강도를 최적화에 반영한 자연스러운 확장.*
 
 ## 개요
 
@@ -39,10 +35,6 @@ Anthropic HH, UltraFeedback 등 실제 투표 수 정보가 있는 데이터셋�
 </div>
 
 <div class="lang-en" markdown="1">
-
-> **Rating: 5 / 5 (Strong Recommend)**
->
-> *"Winning 3:2" and "winning 5:0" shouldn't be treated the same — a natural extension that incorporates vote-based preference strength into optimization.*
 
 ## Overview
 

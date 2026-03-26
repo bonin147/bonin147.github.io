@@ -5,7 +5,7 @@ title_en: "K/DA: Automated Data Generation Pipeline for Detoxifying Implicitly O
 date: 2025-07-27
 categories: [NLP]
 subcategory: "Paper Review"
-tags: [Korean-NLP, Detoxification, Data-Generation, ACL]
+tags: [My-Paper, Korean-NLP, Detoxification, Data-Generation, ACL]
 description: "한국어 암묵적 혐오 표현을 자동으로 탐지하고 정화하는 데이터 생성 파이프라인을 제안합니다."
 bilingual: true
 paper_url: "https://aclanthology.org/2025.acl-long.1039/"
@@ -15,10 +15,6 @@ paper_authors: "Minkyeong Jeon*, Hyemin Jeong*, Yerang Kim, Jiyoung Kim, Jae Hye
 ---
 
 <div class="lang-ko" markdown="1">
-
-> **추천 점수: 4 / 5 (Recommend)**
->
-> *한국어 특유의 암묵적 혐오 표현 문제를 데이터 관점에서 해결한 실용적인 파이프라인.*
 
 ## 개요
 
@@ -39,10 +35,6 @@ paper_authors: "Minkyeong Jeon*, Hyemin Jeong*, Yerang Kim, Jiyoung Kim, Jae Hye
 </div>
 
 <div class="lang-en" markdown="1">
-
-> **Rating: 4 / 5 (Recommend)**
->
-> *A practical pipeline tackling Korea-specific implicit hate speech through automated data generation.*
 
 ## Overview
 
