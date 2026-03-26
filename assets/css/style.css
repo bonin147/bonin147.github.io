@@ -861,6 +861,49 @@ a:hover {
   color: #fff;
 }
 
+/* ---- Sidebar TOC ---- */
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1rem 0;
+}
+
+.sidebar-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-toc-list li {
+  margin: 0;
+}
+
+.sidebar-toc-list li a {
+  display: block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: all 0.15s;
+  line-height: 1.4;
+}
+
+.sidebar-toc-list li a:hover {
+  color: var(--accent);
+}
+
+.sidebar-toc-list li a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  font-weight: 500;
+}
+
+.sidebar-toc-list li.toc-indent a {
+  padding-left: 1.2rem;
+  font-size: 0.75rem;
+}
+
 /* ---- Comments ---- */
 .post-comments {
   margin-top: 3rem;

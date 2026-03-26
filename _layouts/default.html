@@ -37,6 +37,11 @@
             <li><a href="{{ '/stock/' | relative_url }}" {% if page.url == '/stock/' %}class="active"{% endif %} data-i18n="stock">Stock</a></li>
           </ul>
 
+          <div class="sidebar-toc" id="sidebar-toc" style="display:none;">
+            <hr class="sidebar-divider">
+            <div class="sidebar-section-title" data-i18n="toc">Table of Contents</div>
+            <ul class="sidebar-toc-list" id="sidebar-toc-list"></ul>
+          </div>
         </nav>
 
         <div class="sidebar-footer">
@@ -97,12 +102,12 @@
       ko: {
         pages: '페이지', posts: '글 목록', about: '소개 / CV',
         publications: '논문', projects: '프로젝트', search: '검색', stock: '주가',
-        dark_mode: '다크 모드', research_blog: 'Research Blog', read: '읽기 →'
+        dark_mode: '다크 모드', research_blog: 'Research Blog', read: '읽기 →', toc: '목차'
       },
       en: {
         pages: 'Pages', posts: 'Posts', about: 'About / CV',
         publications: 'Publications', projects: 'Projects', search: 'Search', stock: 'Stock',
-        dark_mode: 'Dark mode', research_blog: 'Research Blog', read: 'READ →'
+        dark_mode: 'Dark mode', research_blog: 'Research Blog', read: 'READ →', toc: 'Table of Contents'
       }
     };
 
@@ -151,6 +156,53 @@
     (function() {
       var lang = localStorage.getItem('lang') || 'en';
       applyGlobalLang(lang);
+    })();
+
+    /* Sidebar TOC for posts */
+    (function() {
+      var content = document.querySelector('.post-content');
+      if (!content) return;
+
+      var headings = content.querySelectorAll('h2, h3');
+      if (headings.length === 0) return;
+
+      var tocContainer = document.getElementById('sidebar-toc');
+      var tocList = document.getElementById('sidebar-toc-list');
+      if (!tocContainer || !tocList) return;
+
+      headings.forEach(function(h, i) {
+        if (!h.id) h.id = 'section-' + i;
+        var li = document.createElement('li');
+        if (h.tagName === 'H3') li.classList.add('toc-indent');
+        var a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = h.textContent;
+        a.setAttribute('data-target', h.id);
+        li.appendChild(a);
+        tocList.appendChild(li);
+      });
+
+      tocContainer.style.display = 'block';
+
+      /* Highlight current section on scroll */
+      var tocLinks = tocList.querySelectorAll('a');
+      var mainContent = document.querySelector('.main-content');
+      var scrollTarget = mainContent || window;
+
+      function updateActive() {
+        var scrollTop = mainContent ? mainContent.scrollTop : window.scrollY;
+        var current = null;
+        headings.forEach(function(h) {
+          var top = h.getBoundingClientRect().top + (mainContent ? mainContent.scrollTop - mainContent.getBoundingClientRect().top : window.scrollY);
+          if (top <= scrollTop + 100) current = h.id;
+        });
+        tocLinks.forEach(function(a) {
+          a.classList.toggle('active', a.getAttribute('data-target') === current);
+        });
+      }
+
+      scrollTarget.addEventListener('scroll', updateActive);
+      updateActive();
     })();
   </script>
 </body>
