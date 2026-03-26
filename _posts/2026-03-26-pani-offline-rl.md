@@ -13,63 +13,63 @@ bilingual: true
 
 > **추천 점수: 5 / 5 (Strong Recommend)**
 >
-> *Diffusion의 본질을 3줄로 증류해냈다 — 이론, 성능, 효율 모두 잡은 Offline RL의 숨겨진 보석.*
+> *Diffusion의 핵심을 코드 3줄로 distill해냈다 — 이론, 성능, 효율을 모두 잡은 Offline RL의 숨은 보석.*
 
 ## 왜 이 논문이 저평가되었는가
 
-Offline RL 커뮤니티는 지금 **Diffusion에 취해 있다.** Diffusion-QL, QGPO, SRPO, DTQL — 매 학회마다 쏟아지는 diffusion 기반 offline RL 논문들은 점점 더 복잡한 생성 모델을 쌓아 올리며 성능 표를 채우고 있다. 하지만 한 가지 불편한 질문을 던져보자:
+Offline RL 커뮤니티는 지금 **Diffusion에 빠져 있다.** Diffusion-QL, QGPO, SRPO, DTQL — 학회마다 쏟아지는 diffusion 기반 offline RL 논문들은 점점 더 복잡한 generative model을 쌓아 올리며 성능표를 채우고 있다. 하지만 한 가지 불편한 질문을 던져보자:
 
-> **그 복잡한 denoising process가 정말 필요한 건가?**
+> **그 복잡한 denoising process가 정말 필요한가?**
 
-Korea University의 Oh & Lee가 발표한 **PANI (Penalized Action Noise Injection)**는 이 질문에 대해 **"아니오"**라고 답한다. 그것도 **코드 3줄 수정**으로.
+Korea University의 Oh & Lee가 발표한 **PANI (Penalized Action Noise Injection)**는 이 질문에 **"아니오"**라고 답한다. 그것도 **코드 3줄 수정**으로.
 
-## 핵심 아이디어: 놀라울 정도로 단순하다
+## 핵심 아이디어: Embarrassingly Simple
 
-PANI의 전부를 한 문장으로 요약하면 이렇다:
+PANI를 한 문장으로 요약하면:
 
-> **데이터셋 액션에 노이즈를 주입하고, 노이즈 크기만큼 Q값에 페널티를 준다.**
+> **Dataset action에 noise를 주입하고, noise 크기만큼 Q-value에 penalty를 준다.**
 
 수식으로 쓰면:
 
 $$\bar{y}(s, a, s', a') = y(s, a, s') - \|a - a'\|_2^2$$
 
-여기서 $a'$은 데이터셋 액션 $a$에 노이즈를 주입한 perturbed action이다. 끝이다. **이게 전부다.**
+$a'$은 dataset action $a$에 noise를 주입한 perturbed action이다. 끝이다. **이게 전부다.**
 
-기존 Q-learning 목적함수에서 (1) 노이즈를 넣은 액션으로 Q-network를 업데이트하고, (2) 원래 액션에서 멀어진 만큼 타겟 값을 깎아준다. OOD 액션에 대한 Q값이 부풀려지는 문제를 **구조적으로 억제**하는 것이다.
+기존 Q-learning objective에서 (1) noise를 주입한 action으로 Q-network를 업데이트하고, (2) 원래 action에서 멀어진 만큼 target value를 깎는다. OOD action에 대한 Q-value overestimation을 **구조적으로 억제**하는 방식이다.
 
-## Diffusion이 하는 일을 한 발 뒤로 물러서서 보면
+## Diffusion이 실제로 하는 일
 
-왜 이것이 작동하는지 이해하려면, **diffusion 모델이 offline RL에서 실제로 무엇을 하고 있는지** 분해해볼 필요가 있다.
+왜 이것이 작동하는지 이해하려면, **diffusion model이 offline RL에서 실제로 무슨 역할을 하는지** 뜯어볼 필요가 있다.
 
-Diffusion 모델은 본질적으로 **multi-scale noise를 사용한 score matching**이다. Denoising Score Matching(DSM)은 데이터에 노이즈를 주입해서, 데이터가 희소한 영역에서도 학습 신호를 만들어낸다. Diffusion은 이걸 여러 노이즈 레벨에서 반복해서 더 안정적으로 만든 것이다.
+Diffusion model은 본질적으로 **multi-scale noise를 활용한 score matching**이다. Denoising Score Matching(DSM)은 데이터에 noise를 주입해, 데이터가 sparse한 영역에서도 학습 signal을 만들어낸다. Diffusion은 이를 여러 noise level에서 반복하여 더 안정적으로 만든 것뿐이다.
 
-PANI의 저자들은 이 **본질적 메커니즘**을 정확히 짚어냈다:
+PANI의 저자들은 이 **핵심 메커니즘**을 정확히 포착했다:
 
-1. **노이즈 주입** → 액션 공간 전체에 학습 신호를 전파
-2. **노이즈 크기에 비례한 페널티** → 데이터에서 먼 액션일수록 Q값을 억제
-3. **다중 스케일 노이즈 (Hybrid Distribution)** → 다양한 노이즈 레벨의 장점을 결합
+1. **Noise injection** → action space 전체로 학습 signal을 전파
+2. **Noise 크기에 비례한 penalty** → 데이터에서 먼 action일수록 Q-value 억제
+3. **Multi-scale noise (Hybrid Distribution)** → 다양한 noise level의 장점을 결합
 
-Diffusion이 복잡한 생성 과정을 통해 암묵적으로 달성하는 것을, PANI는 **명시적이고 직접적으로** 달성한다.
+Diffusion이 복잡한 generative process를 통해 암묵적으로 달성하는 것을, PANI는 **명시적이고 직접적으로** 달성한다.
 
 ## 이론적 기반: Noisy Action MDP
 
-PANI가 단순한 heuristic이 아닌 이유는 **Noisy Action MDP (NAMDP)**라는 이론적 프레임워크 때문이다.
+PANI가 단순한 heuristic이 아닌 이유는 **Noisy Action MDP (NAMDP)**라는 이론적 framework 때문이다.
 
-PANI의 목적함수를 최소화하는 것은 **수정된 MDP에서의 Q-learning과 동치**임을 증명한다 (Theorem 5.3). 이 NAMDP에서는:
+저자들은 PANI objective를 최소화하는 것이 **modified MDP에서의 Q-learning과 동치**임을 증명한다 (Theorem 5.3). NAMDP에서는:
 
-- **전이 확률** $P_\sigma$가 노이즈 분포를 통해 재정의된다
-- **보상 함수** $R_\sigma$에 노이즈 크기만큼의 페널티가 내장된다
-- 노이즈 분포의 support가 전체 액션 공간을 커버하므로, **OOD 영역에서도 Q값이 업데이트**된다
+- **Transition probability** $P_\sigma$가 noise distribution을 통해 재정의된다
+- **Reward function** $R_\sigma$에 noise 크기만큼의 penalty가 내장된다
+- Noise distribution의 support가 전체 action space를 커버하므로, **OOD 영역에서도 Q-value가 업데이트**된다
 
-이것은 CQL이나 TD3+BC 같은 기존 보수적 방법론과 근본적으로 다른 접근이다. 기존 방법들은 OOD 액션을 **회피**하는 반면, PANI는 OOD 영역에 **직접 진입하여 Q값을 교정**한다.
+이는 CQL이나 TD3+BC 같은 기존 conservative 방법론과 근본적으로 다르다. 기존 방법들은 OOD action을 **회피**하지만, PANI는 OOD 영역에 **직접 진입하여 Q-value를 교정**한다.
 
-## 성능: 숫자가 말한다
+## 성능: 숫자로 보자
 
-D4RL 벤치마크에서의 결과는 솔직히 **당혹스러울 정도**다.
+D4RL benchmark 결과는 솔직히 **당혹스러울 정도**다.
 
-### Gym-MuJoCo (medium 데이터셋 평균)
+### Gym-MuJoCo (medium dataset 평균)
 
-| 알고리즘 | 평균 점수 | 비고 |
+| Algorithm | 평균 점수 | 비고 |
 |---------|----------|------|
 | IQL (baseline) | 77.0 | — |
 | **IQL-AN (PANI 적용)** | **87.2** | **+10.2** |
@@ -80,11 +80,11 @@ D4RL 벤치마크에서의 결과는 솔직히 **당혹스러울 정도**다.
 | SRPO | 87.1 | Diffusion 기반 |
 | DTQL | 88.7 | Diffusion 기반 |
 
-**TD3에 PANI를 적용한 것(TD3-AN)이 모든 diffusion 기반 방법을 이긴다.** IQL-AN도 대부분의 diffusion 방법과 동등하거나 우수하다.
+**TD3에 PANI를 적용한 TD3-AN이 모든 diffusion 기반 방법을 이긴다.** IQL-AN 역시 대부분의 diffusion 방법과 동등하거나 그 이상이다.
 
 ### AntMaze
 
-| 알고리즘 | 평균 점수 |
+| Algorithm | 평균 점수 |
 |---------|----------|
 | IQL | 58.4 |
 | TD3+BC | 28.8 |
@@ -92,105 +92,105 @@ D4RL 벤치마크에서의 결과는 솔직히 **당혹스러울 정도**다.
 | **TD3-AN** | **77.7 (+48.9)** |
 | QGPO | 78.3 |
 
-TD3+BC에서 TD3-AN으로의 점프가 **+48.9**라는 것은 거의 믿기 어려운 수치다. PANI 하나로 완전히 실패하던 알고리즘이 SOTA급으로 부활한다.
+TD3+BC에서 TD3-AN으로 **+48.9** 점프는 거의 믿기 어려운 수치다. PANI 하나로 완전히 망가져 있던 알고리즘이 SOTA급으로 부활한다.
 
-## 계산 비용: 이게 진짜 핵심이다
+## Compute Cost: 진짜 핵심
 
-| 알고리즘 | 학습 시간 (10⁶ steps) | 오버헤드 |
+| Algorithm | Training Time (10⁶ steps) | Overhead |
 |---------|---------------------|---------|
 | IQL | 9m 33s | — |
 | IQL-AN | 10m 22s | **+9%** |
 | TD3 | 15m 45s | — |
 | TD3-AN | 16m 14s | **+3%** |
 
-**3~9%의 학습 시간 증가로 10~50점의 성능 향상.** Diffusion 기반 방법들이 수 배의 학습 시간과 추론 시의 denoising 과정을 필요로 하는 것과 비교하면, 이건 거저먹는 것이다.
+**3~9% training time 증가로 10~50점 성능 향상.** Diffusion 기반 방법들이 수 배의 학습 시간과 inference 시 denoising을 요구하는 것과 비교하면, 사실상 공짜다.
 
-더 중요한 것은 **추론 시간**이다. Diffusion 정책은 추론 시마다 여러 step의 denoising을 수행해야 하지만, PANI는 기존 MLP 정책을 그대로 사용한다. 실시간 시스템이나 리소스 제한 환경에서 이 차이는 결정적이다.
+더 중요한 것은 **inference time**이다. Diffusion policy는 매번 여러 step의 denoising을 수행해야 하지만, PANI는 기존 MLP policy를 그대로 쓴다. Real-time system이나 resource 제한 환경에서 이 차이는 결정적이다.
 
 ## Hybrid Noise Distribution: 유일한 설계 선택
 
-PANI에서 유일하게 비자명(non-trivial)한 설계 선택은 **Hybrid Noise Distribution**이다.
+PANI에서 유일하게 non-trivial한 설계 선택은 **Hybrid Noise Distribution**이다.
 
-단순 가우시안 노이즈의 문제:
-- **노이즈가 작으면**: 커버리지 부족, OOD 문제 미해결
-- **노이즈가 크면**: 모드 붕괴(mode collapse), 샘플 비효율성
+단순한 Gaussian noise의 문제:
+- **Noise가 작으면**: coverage 부족, OOD 문제 미해결
+- **Noise가 크면**: mode collapse, sample inefficiency
 
 이를 해결하기 위해 두 가지 기법을 결합한다:
 
 1. **Uniform mixture**: $q_t^A(a' \mid a) = \alpha(t) \cdot U(a' \mid A) + (1-\alpha(t)) \cdot q_t(a' \mid a)$
-2. **Exponential scaling**: 가우시안 노이즈에 지수적 스케일링을 적용해 **leptokurtic** 분포를 유도
+2. **Exponential scaling**: Gaussian noise에 exponential scaling을 적용해 **leptokurtic** distribution을 유도
 
-결과적으로 넓은 범위의 노이즈 스케일에서 **강건한 성능**을 보인다. Gaussian이나 Laplace 분포가 특정 스케일에서 급격히 성능이 떨어지는 반면, Hybrid는 일관된 성능을 유지한다.
+결과적으로 넓은 범위의 noise scale에서 **robust한 성능**을 보인다. Gaussian이나 Laplace distribution이 특정 scale에서 급격히 성능이 떨어지는 반면, Hybrid는 일관성을 유지한다.
 
-## OOD 과대추정 억제: 실증적 증거
+## OOD Overestimation 억제: 실증적 증거
 
-OOD 과대추정 확률 $P(Q(s, a') > Q(s, a))$ (여기서 $a$는 데이터셋 액션, $a'$은 uniform 샘플):
+OOD overestimation probability $P(Q(s, a') > Q(s, a))$ ($a$는 dataset action, $a'$은 uniform sample):
 
-| 데이터셋 | TD3+BC | TD3-AN | IQL | IQL-AN |
+| Dataset | TD3+BC | TD3-AN | IQL | IQL-AN |
 |---------|--------|--------|-----|--------|
 | halfcheetah-expert | 0.014 | **0.002** | 0.014 | **0.001** |
 | halfcheetah-medium | 0.112 | **0.004** | 0.211 | **0.006** |
 | hopper-expert | 0.483 | **0.034** | 0.425 | **0.036** |
 | walker2d-medium | 0.316 | **0.002** | 0.147 | **0.004** |
 
-OOD 과대추정 확률이 **10~100배 감소**한다. 이건 단순히 "성능이 좋다"가 아니라, PANI가 **문제의 근본 원인을 직접 해결**하고 있다는 강력한 증거다.
+OOD overestimation probability가 **10~100배 감소**한다. 단순히 "성능이 좋다"가 아니라, PANI가 **문제의 root cause를 직접 해결**하고 있다는 강한 증거다.
 
 ## Peer Review가 인정한 것들
 
-PANI는 ICLR 2026에 제출되었다가 저자들이 자진 철회(withdrawn)했다. 하지만 리뷰 자체를 보면, **비판적인 리뷰어들조차 PANI의 핵심 강점은 인정**하고 있다. 가장 높은 점수(6점)를 준 리뷰어의 평가를 보자:
+PANI는 ICLR 2026에 제출되었다가 저자들이 자진 철회(withdrawn)했다. 하지만 리뷰 내용을 보면, **비판적인 리뷰어들조차 PANI의 핵심 강점은 인정**하고 있다. 가장 높은 점수(6점)를 준 리뷰어의 평가:
 
-> *"OOD 문제를 **새로운 관점**에서 접근한 점이 인상적이다. PANI가 다른 방법들과 **호환 가능하다는 장점은 매우 매력적**이다."*
+> *"OOD 문제를 **새로운 관점**에서 접근한 점이 인상적이다. PANI가 다른 방법들과 **호환 가능하다는 점은 매우 매력적**이다."*
 >
-> *"NAMDP라는 이론적 프레임워크를 형식화하고, Hybrid Noise Distribution 개념을 제안하여 **전체 방법론의 이론적 기반을 구축**한 점도 높이 평가한다."*
+> *"NAMDP라는 이론적 framework를 형식화하고, Hybrid Noise Distribution 개념을 제안하여 **전체 방법론의 이론적 기반을 구축**한 점도 높이 평가한다."*
 
-다른 리뷰어들도 공통적으로 인정한 장점들이 있다:
+다른 리뷰어들도 공통적으로 인정한 장점들:
 
-- **"직관적이고 명확한 설명"** — 방법론의 직관과 이론이 깔끔하게 전달된다 (Reviewer nUxv)
-- **"경량 drop-in 수정"** — 기존 알고리즘에 최소한의 변경만으로 통합 가능하다 (Reviewer mqZV)
-- **"노이즈와 데이터셋 액션 간 거리에 따라 페널티를 조절하는 것이 직관적으로 더 부드러운 Q-value surface를 만든다"** — 데이터 경계 주변의 급격한 값 변화를 줄여준다 (Reviewer nUxv)
-- **"D4RL locomotion, Adroit, AntMaze, OGBench 등 다양한 벤치마크에서 실험"** — 폭넓은 검증 (Reviewer SH7n)
+- **"직관적이고 명확한 설명"** — 방법론의 intuition과 이론이 깔끔하게 전달된다 (Reviewer nUxv)
+- **"경량 drop-in 수정"** — 기존 알고리즘에 최소한의 변경만으로 통합 가능 (Reviewer mqZV)
+- **"Noise와 dataset action 간 거리에 따른 penalty 조절이 직관적으로 smoother Q-value surface를 형성"** — data boundary 주변의 급격한 value 변화를 완화 (Reviewer nUxv)
+- **"D4RL locomotion, Adroit, AntMaze, OGBench 등 다양한 benchmark에서 실험"** — 폭넓은 검증 (Reviewer SH7n)
 
-흥미로운 점은, 철회 사유가 "방법이 작동하지 않아서"가 아니었다는 것이다. 저자들의 철회 코멘트를 보면:
+주목할 점은, 철회 사유가 "방법이 안 돼서"가 아니라는 것이다. 저자들의 철회 코멘트:
 
-> *"리뷰어들의 철저하고 통찰력 있는 피드백에 진심으로 감사드립니다. 상당한 수정이 필요하다는 점을 충분히 인지하고 있으며, 모든 코멘트를 신중하게 반영하여 훨씬 강화된 버전을 재제출할 것입니다."*
+> *"리뷰어들의 철저하고 통찰력 있는 피드백에 감사드립니다. 상당한 수정이 필요하다는 점을 인지하고 있으며, 모든 코멘트를 반영하여 강화된 버전을 재제출하겠습니다."*
 
-리뷰어들의 주요 비판은 **방법론 자체보다는 논문의 완성도**에 집중되어 있었다: 관련 연구 비교 부족(RORL, SAC-RND 등 유사 접근법과의 비교), 페널티 항의 스케일 민감도 분석 부재, 코드 미공개, 하이퍼파라미터 튜닝의 공정성 문제 등. **핵심 아이디어의 참신성과 실용성은 비판적 리뷰어들도 부정하지 못했다.**
+리뷰어들의 주요 비판은 **방법론 자체보다 논문 완성도**에 집중되어 있었다: 관련 연구 비교 부족 (RORL, SAC-RND 등과의 비교), penalty term의 scale sensitivity 분석 부재, 코드 미공개, hyperparameter tuning 공정성 문제 등. **핵심 아이디어의 novelty와 실용성은 가장 비판적인 리뷰어도 부정하지 못했다.**
 
 ## 왜 이 논문에 주목해야 하는가
 
-**1. 연구적 의미: Diffusion은 과잉 설계일 수 있다**
+**1. 연구적 관점: Diffusion은 over-engineering일 수 있다**
 
-PANI는 Offline RL에서 diffusion 모델이 성공한 이유가 "diffusion이기 때문"이 아니라, **"노이즈 주입을 통한 액션 공간 커버리지 확장"** 때문이었음을 시사한다. 이는 향후 연구 방향에 대한 중요한 시사점이다.
+PANI는 offline RL에서 diffusion model의 성공 요인이 "diffusion이어서"가 아니라, **"noise injection을 통한 action space coverage 확장"**에 있었음을 시사한다. 향후 연구 방향에 대한 중요한 시사점이다.
 
-**2. 실무적 의미: 즉시 적용 가능하다**
+**2. 실용적 관점: 바로 적용 가능하다**
 
-기존 IQL이나 TD3 코드에 **몇 줄만 추가**하면 된다. 새로운 아키텍처도, 새로운 학습 파이프라인도, 새로운 추론 과정도 필요 없다. Q-update 단계에서 노이즈를 넣고 페널티를 주면 끝이다. 리뷰어가 말했듯, **"경량 drop-in 수정으로 기존 알고리즘의 표준 Q-update 단계만 바꾸면 된다."**
+기존 IQL이나 TD3 코드에 **몇 줄만 추가**하면 된다. 새로운 architecture도, 새로운 training pipeline도, 새로운 inference 과정도 필요 없다. Q-update 단계에서 noise를 넣고 penalty를 주면 끝이다. 리뷰어 표현대로, **"기존 알고리즘의 Q-update step만 바꾸는 lightweight drop-in 수정"**이다.
 
 **3. 범용성: 어디에든 붙일 수 있다**
 
-PANI는 TD3, IQL뿐만 아니라 diffusion 기반인 QGPO에도 적용 가능하며, 성능이 향상된다. 리뷰어들이 인정했듯 **"다른 방법들과의 호환성은 매우 매력적"**이며, 이는 PANI가 특정 알고리즘에 종속된 trick이 아니라 **범용적인 원리**임을 보여준다.
+PANI는 TD3, IQL뿐 아니라 diffusion 기반인 QGPO에도 적용 가능하고, 전부 성능이 오른다. 리뷰어들이 인정했듯 **"다른 방법들과의 호환성은 매우 매력적"**이며, 이는 PANI가 특정 알고리즘에 종속된 trick이 아니라 **범용적 원리**임을 뜻한다.
 
 ## 한계와 열린 질문
 
-솔직히 말하면, PANI에도 한계는 있다. 리뷰어들이 제기한 비판 중 유효한 것들을 포함하면:
+PANI에도 한계는 있다. 리뷰어들이 제기한 유효한 비판을 포함하면:
 
-- **최적 노이즈 스케일 선택**이 데이터셋에 의존한다. Hybrid distribution이 이 문제를 완화하지만, 완전히 해결하지는 못한다
-- **데이터셋의 액션 커버리지가 극도로 낮은 경우** 노이즈 주입만으로 충분한지는 미지수다. 한 리뷰어가 지적했듯, *"매우 좁은 분포의 expert 데이터셋에서 PANI가 어떻게 작동하는지에 대한 더 상세한 논의가 필요하다"*
-- **페널티 항 $\|a - a'\|_2^2$의 스케일 문제** — 보상 스케일과 액션 스케일이 다른 태스크에서 페널티의 상대적 크기가 달라질 수 있다. 스케일링 하이퍼파라미터 $\alpha$의 도입이 필요할 수 있다
-- **고차원 액션 공간**에서의 스케일링과 계산 효율성은 추가 검증이 필요하다
-- RORL, SAC-RND, EPQ 등 **유사한 pessimistic/anti-exploration 접근법과의 체계적 비교**가 부족하다
+- **최적 noise scale 선택**이 dataset에 의존한다. Hybrid distribution이 이를 완화하지만, 완전히 해결하지는 못한다
+- **Dataset의 action coverage가 극도로 낮은 경우** noise injection만으로 충분한지는 열린 질문이다. 한 리뷰어가 지적했듯, *"매우 좁은 분포의 expert dataset에서 PANI가 어떻게 작동하는지 더 상세한 논의가 필요하다"*
+- **Penalty term $\|a - a'\|_2^2$의 scale 문제** — reward scale과 action scale이 다른 task에서 penalty의 상대적 크기가 달라질 수 있다. Scaling hyperparameter $\alpha$의 도입이 필요할 수 있다
+- **고차원 action space**에서의 scalability와 computational efficiency는 추가 검증 필요
+- RORL, SAC-RND, EPQ 등 **유사한 pessimistic/anti-exploration 접근법과의 체계적 비교** 부족
 
-하지만 이러한 한계를 감안하더라도, **복잡도 대비 성능의 비율(performance-per-complexity ratio)**에서 PANI를 이길 방법은 현재 없다. 논문의 완성도는 개선의 여지가 있지만, **핵심 아이디어의 가치는 리뷰 점수와 무관하게 빛난다.**
+이러한 한계에도, **complexity 대비 performance 비율**에서 PANI를 능가하는 방법은 현재 없다. 논문 완성도는 개선 여지가 있지만, **핵심 아이디어의 가치는 review score와 무관하게 빛난다.**
 
 ## 결론: 단순함의 승리
 
-PANI는 최근 몇 년간 Offline RL 분야에서 나온 **가장 과소평가된 논문**이다. Diffusion 모델의 화려함에 가려져 있지만, 그 본질을 꿰뚫어 **최소한의 수정으로 동등 이상의 성능**을 달성한다.
+PANI는 최근 몇 년간 Offline RL에서 나온 **가장 과소평가된 논문**이다. Diffusion model의 화려함에 가려져 있지만, 그 본질을 꿰뚫어 **최소한의 수정으로 동등 이상의 성능**을 달성한다.
 
-연구자라면 이 논문의 이론적 프레임워크(NAMDP)에 주목하라. 실무자라면 지금 당장 기존 코드에 PANI를 붙여보라. **3줄의 코드가 수천 줄의 diffusion 구현을 대체할 수 있다.**
+연구자라면 NAMDP theoretical framework에 주목하라. 실무자라면 지금 당장 기존 코드에 PANI를 적용해보라. **3줄의 코드가 수천 줄의 diffusion implementation을 대체할 수 있다.**
 
 > **"The best ideas are embarrassingly simple — the hard part is realizing they work."**
 
-**논문 정보**: Oh, J. & Lee, B.-J. (2025). *Offline Reinforcement Learning with Penalized Action Noise Injection*. arXiv:2507.02356. Korea University & Gauss Labs.
+**Paper**: Oh, J. & Lee, B.-J. (2025). *Offline Reinforcement Learning with Penalized Action Noise Injection*. arXiv:2507.02356. Korea University & Gauss Labs.
 
 </div>
 
