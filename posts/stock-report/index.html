@@ -4,26 +4,15 @@ title: "Stock Report"
 permalink: /posts/stock-report/
 subcategory_filter: "Stock Report"
 ---
-<div class="page-label lang-ko">주식 리포트</div>
-<div class="page-label lang-en">Stock Report</div>
+<div class="page-label lang-ko">주요 종목에 대한 기관 리서치를 종합 분석한 심층 리포트입니다.</div>
+<div class="page-label lang-en">Deep synthesis reports combining institutional research on major stocks.</div>
 <h1 class="page-heading lang-ko">주식 리포트</h1>
 <h1 class="page-heading lang-en">Stock Report</h1>
-<p class="page-description lang-ko">
-  주요 종목에 대한 기관 리서치를 종합 분석한 심층 리포트입니다.
-</p>
-<p class="page-description lang-en">
-  Deep synthesis reports combining institutional research on major stocks.
-</p>
 
 <ul class="post-list">
   {% assign filtered = site.posts | where: "subcategory", "Stock Report" %}
   {% for post in filtered %}
   <li class="post-item">
-    <div class="post-item-header">
-      <div class="post-meta">
-        {{ post.date | date: "%Y &middot; %m &middot; %d" }}
-      </div>
-    </div>
     {% if post.tags.size > 0 %}
     <div class="post-tags">
       {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}

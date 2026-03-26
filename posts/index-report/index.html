@@ -4,26 +4,15 @@ title: "Index Report"
 permalink: /posts/index-report/
 subcategory_filter: "Index Report"
 ---
-<div class="page-label lang-ko">지수 리포트</div>
-<div class="page-label lang-en">Index Report</div>
+<div class="page-label lang-ko">주요 주가지수에 대한 매크로 분석과 투자 의견을 제시합니다.</div>
+<div class="page-label lang-en">Macro analysis and investment views on major market indices.</div>
 <h1 class="page-heading lang-ko">지수 리포트</h1>
 <h1 class="page-heading lang-en">Index Report</h1>
-<p class="page-description lang-ko">
-  주요 주가지수에 대한 매크로 분석과 투자 의견을 제시합니다.
-</p>
-<p class="page-description lang-en">
-  Macro analysis and investment views on major market indices.
-</p>
 
 <ul class="post-list">
   {% assign filtered = site.posts | where: "subcategory", "Index Report" %}
   {% for post in filtered %}
   <li class="post-item">
-    <div class="post-item-header">
-      <div class="post-meta">
-        {{ post.date | date: "%Y &middot; %m &middot; %d" }}
-      </div>
-    </div>
     {% if post.tags.size > 0 %}
     <div class="post-tags">
       {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
