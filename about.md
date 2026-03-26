@@ -18,11 +18,18 @@ permalink: /about/
 <div class="lang-ko" markdown="1">
 
 <div class="about-section">
+<h2>소개</h2>
+<p>AI 연구자로서 LLM과 강화학습의 교차점을 탐구하고 있습니다. 석사 과정에서 Preference Optimization 알고리즘을 연구했으며, 현재는 LG CNS에서 Agentic AI 시스템을 개발하고 있습니다.</p>
+<p>이 블로그에서는 최신 AI/ML 논문을 깊이 있게 분석하고, 주요 기술주와 시장 지수에 대한 투자 리포트를 작성합니다. 저평가된 논문을 발굴하고, 기관 리서치를 종합하여 독자적인 시각을 제공하는 것을 지향합니다.</p>
+</div>
+
+<div class="about-section">
 <h2>연구 관심 분야</h2>
 <ul>
-  <li>인간 피드백 기반 강화학습 (RLHF)</li>
-  <li>자연어 처리 (NLP)</li>
-  <li>검색 증강 생성 (RAG)</li>
+  <li>Preference Optimization (DPO, RLHF)</li>
+  <li>대규모 언어 모델 (LLM, VLM)</li>
+  <li>Retrieval Augmented Generation (RAG)</li>
+  <li>Offline Reinforcement Learning</li>
 </ul>
 </div>
 
@@ -133,8 +140,9 @@ permalink: /about/
 <div class="about-section">
 <h2>기술 스택</h2>
 <ul>
-  <li>Python, PyTorch, Huggingface</li>
-  <li>Docker, Linux</li>
+  <li>Python, PyTorch, Hugging Face Transformers, TRL</li>
+  <li>Docker, Linux, Git</li>
+  <li>Jekyll, GitHub Pages</li>
 </ul>
 </div>
 
@@ -154,11 +162,18 @@ permalink: /about/
 <div class="lang-en" markdown="1">
 
 <div class="about-section">
+<h2>About</h2>
+<p>I'm an AI researcher exploring the intersection of LLMs and reinforcement learning. During my M.S., I focused on preference optimization algorithms for language models. Currently, I'm building agentic AI systems at LG CNS.</p>
+<p>On this blog, I write in-depth reviews of AI/ML papers — especially underrated ones that deserve more attention — and publish investment reports synthesizing institutional research on major tech stocks and market indices.</p>
+</div>
+
+<div class="about-section">
 <h2>Research Interests</h2>
 <ul>
-  <li>Reinforcement Learning from Human Feedback (RLHF)</li>
-  <li>Natural Language Processing (NLP)</li>
+  <li>Preference Optimization (DPO, RLHF)</li>
+  <li>Large Language Models (LLM, VLM)</li>
   <li>Retrieval Augmented Generation (RAG)</li>
+  <li>Offline Reinforcement Learning</li>
 </ul>
 </div>
 
@@ -269,8 +284,9 @@ permalink: /about/
 <div class="about-section">
 <h2>Skills</h2>
 <ul>
-  <li>Python, PyTorch, Huggingface</li>
-  <li>Docker, Linux</li>
+  <li>Python, PyTorch, Hugging Face Transformers, TRL</li>
+  <li>Docker, Linux, Git</li>
+  <li>Jekyll, GitHub Pages</li>
 </ul>
 </div>
 

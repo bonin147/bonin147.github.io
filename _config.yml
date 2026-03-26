@@ -1,6 +1,6 @@
 title: Jaehyeon Cho's Blog
-description: "NLP(LLM, VLM), RAG, RLHF를 포함한 내용을 다룹니다."
-description_en: "Exploring topics in NLP (LLM, VLM), RAG, and RLHF."
+description: "AI/ML 논문 리뷰와 투자 리포트를 다룹니다."
+description_en: "AI/ML paper reviews and investment reports."
 url: "https://bonin147.github.io" # GitHub Pages URL (예: https://username.github.io)
 baseurl: "" # 레포지토리 이름 (username.github.io 사용 시 "" 로 변경)
 
