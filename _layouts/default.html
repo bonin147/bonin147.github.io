@@ -106,6 +106,8 @@
     </main>
   </div>
 
+  <button class="scroll-top-btn" id="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
+
   <script>
     /* Dark mode */
     function toggleTheme() {
@@ -257,6 +259,15 @@
       updateActive();
     }
     buildTOC();
+
+    /* Scroll to top button */
+    (function() {
+      var btn = document.getElementById('scroll-top-btn');
+      if (!btn) return;
+      window.addEventListener('scroll', function() {
+        btn.classList.toggle('visible', window.scrollY > 400);
+      });
+    })();
   </script>
 </body>
 </html>
