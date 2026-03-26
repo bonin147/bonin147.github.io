@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Stock
-permalink: /stock/
+title: "BABA - Alibaba"
+permalink: /stock/baba/
 ---
 
 <div class="stock-header">
   <div>
-    <h1 class="lang-ko">주가</h1>
-    <h1 class="lang-en">Stock</h1>
+    <h1>BABA</h1>
+    <p class="stock-subtitle lang-ko">알리바바 그룹 · NYSE</p>
+    <p class="stock-subtitle lang-en">Alibaba Group · NYSE</p>
   </div>
   <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Fullscreen">
     <span id="fs-icon">&#x26F6;</span>
@@ -16,9 +17,8 @@ permalink: /stock/
 
 <div class="stock-widget" id="stock-widget">
   <button class="fullscreen-close-btn" onclick="toggleFullscreen()" title="Close fullscreen">&#x2716;</button>
-  <!-- TradingView Widget BEGIN -->
   <div class="tradingview-widget-container">
-    <div id="tradingview_baba"></div>
+    <div id="tradingview_chart"></div>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script type="text/javascript">
     new TradingView.widget({
@@ -32,15 +32,13 @@ permalink: /stock/
       "toolbar_bg": "#f1f3f6",
       "enable_publishing": false,
       "allow_symbol_change": true,
-      "container_id": "tradingview_baba"
+      "container_id": "tradingview_chart"
     });
     </script>
   </div>
-  <!-- TradingView Widget END -->
 </div>
 
 <div class="stock-research">
-
   <div class="lang-ko">
     <h3>기관 리서치 요약</h3>
     <p>알리바바에 대한 주요 IB 9곳의 공통 프레임은 <strong>"단기 수익성 훼손 vs. Cloud/AI 구조적 성장"</strong>의 줄다리기입니다. 퀵커머스·로컬서비스 경쟁으로 단기 이익은 압박받고 있으나, 클라우드 성장 재가속(FY26 32%, FY27 40%)과 AI 수요 폭증이 중장기 핵심 드라이버로 지목됩니다.</p>
@@ -57,7 +55,6 @@ permalink: /stock/
     </table>
     <a href="{{ '/2026/03/25/alibaba-deep-research/' | relative_url }}" class="post-read">전체 리포트 읽기 →</a>
   </div>
-
   <div class="lang-en">
     <h3>Institutional Research Summary</h3>
     <p>The consensus framework from 9 major IBs on Alibaba is a tug-of-war between <strong>"short-term profitability erosion vs. structural Cloud/AI growth."</strong> While short-term profits face pressure from quick commerce/local services competition, cloud growth re-acceleration (FY26 32%, FY27 40%) and surging AI demand are identified as key medium-to-long-term drivers.</p>
@@ -74,7 +71,6 @@ permalink: /stock/
     </table>
     <a href="{{ '/2026/03/25/alibaba-deep-research/' | relative_url }}" class="post-read">Read full report →</a>
   </div>
-
 </div>
 
 <script>

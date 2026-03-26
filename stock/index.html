@@ -1,0 +1,31 @@
+---
+layout: default
+title: Stock
+permalink: /stock/
+---
+
+<div class="stock-header">
+  <div>
+    <h1 class="lang-ko">주가</h1>
+    <h1 class="lang-en">Stock</h1>
+  </div>
+</div>
+
+<div class="stock-list">
+  <a href="{{ '/stock/baba/' | relative_url }}" class="stock-card">
+    <div class="stock-card-ticker">BABA</div>
+    <div class="stock-card-name">
+      <span class="lang-ko">알리바바 그룹</span>
+      <span class="lang-en">Alibaba Group</span>
+    </div>
+    <div class="stock-card-exchange">NYSE</div>
+  </a>
+  <a href="{{ '/stock/googl/' | relative_url }}" class="stock-card">
+    <div class="stock-card-ticker">GOOGL</div>
+    <div class="stock-card-name">
+      <span class="lang-ko">알파벳 (구글)</span>
+      <span class="lang-en">Alphabet (Google)</span>
+    </div>
+    <div class="stock-card-exchange">NASDAQ</div>
+  </a>
+</div>

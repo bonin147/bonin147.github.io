@@ -168,6 +168,17 @@ a:hover {
   color: var(--accent);
 }
 
+.sidebar-sub {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-sub li a {
+  padding-left: 2rem;
+  font-size: 0.82rem;
+}
+
 .sidebar-pages a.active {
   color: var(--accent);
   border-left-color: var(--accent);
@@ -937,6 +948,54 @@ a:hover {
 /* ---- Footer (hidden in sidebar layout) ---- */
 .site-footer {
   display: none;
+}
+
+/* ---- Stock List ---- */
+.stock-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stock-card {
+  display: block;
+  padding: 1.2rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.stock-card:hover {
+  border-color: var(--accent);
+}
+
+.stock-card-ticker {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text);
+}
+
+.stock-card-name {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-top: 0.3rem;
+}
+
+.stock-card-exchange {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+.stock-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0.2rem 0 0;
 }
 
 /* ---- Stock Widget ---- */
