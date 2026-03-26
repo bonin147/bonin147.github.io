@@ -13,6 +13,7 @@ title: Home
 
 {% assign subcategories = "Paper Review,Stock Report,Index Report" | split: "," %}
 {% assign subcat_ko = "논문 리뷰,주식 리포트,지수 리포트" | split: "," %}
+{% assign subcat_slugs = "paper-review,stock-report,index-report" | split: "," %}
 {% for subcat in subcategories %}
   {% assign filtered = site.posts | where: "subcategory", subcat %}
   {% if filtered.size > 0 %}
@@ -22,8 +23,7 @@ title: Home
         <span class="lang-ko">{{ subcat_ko[forloop.index0] }}</span>
         <span class="lang-en">{{ subcat }}</span>
       </h2>
-      {% assign subcat_slug = subcat | slugify %}
-      <a href="{{ '/posts/' | append: subcat_slug | append: '/' | relative_url }}" class="post-section-more">
+      <a href="{{ '/posts/' | append: subcat_slugs[forloop.index0] | append: '/' | relative_url }}" class="post-section-more">
         <span class="lang-ko">더보기 →</span>
         <span class="lang-en">View all →</span>
       </a>
