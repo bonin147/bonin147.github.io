@@ -151,6 +151,9 @@
       });
 
       document.documentElement.setAttribute('lang', lang);
+
+      /* Rebuild TOC for current language */
+      setTimeout(function() { if (typeof buildTOC === 'function') buildTOC(); }, 50);
     }
 
     (function() {
@@ -159,16 +162,23 @@
     })();
 
     /* Sidebar TOC for posts */
-    (function() {
+    function buildTOC() {
       var content = document.querySelector('.post-content');
-      if (!content) return;
-
-      var headings = content.querySelectorAll('h2, h3');
-      if (headings.length === 0) return;
-
       var tocContainer = document.getElementById('sidebar-toc');
       var tocList = document.getElementById('sidebar-toc-list');
-      if (!tocContainer || !tocList) return;
+      if (!content || !tocContainer || !tocList) return;
+
+      tocList.innerHTML = '';
+
+      /* Only pick visible headings (matching current language) */
+      var headings = [];
+      content.querySelectorAll('h2, h3').forEach(function(h) {
+        if (h.offsetParent !== null && h.style.display !== 'none') {
+          headings.push(h);
+        }
+      });
+
+      if (headings.length === 0) { tocContainer.style.display = 'none'; return; }
 
       headings.forEach(function(h, i) {
         if (!h.id) h.id = 'section-' + i;
@@ -201,9 +211,11 @@
         });
       }
 
+      scrollTarget.removeEventListener('scroll', updateActive);
       scrollTarget.addEventListener('scroll', updateActive);
       updateActive();
-    })();
+    }
+    buildTOC();
   </script>
 </body>
 </html>

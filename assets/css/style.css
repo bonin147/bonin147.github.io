@@ -880,22 +880,20 @@ a:hover {
 
 .sidebar-toc-list li a {
   display: block;
-  padding: 0.25rem 0.6rem;
+  padding: 0.25rem 0;
   font-size: 0.8rem;
   color: var(--text-secondary);
   text-decoration: none;
-  border-left: 2px solid transparent;
   transition: all 0.15s;
   line-height: 1.4;
 }
 
 .sidebar-toc-list li a:hover {
-  color: var(--accent);
+  text-decoration: underline;
 }
 
 .sidebar-toc-list li a.active {
-  color: var(--accent);
-  border-left-color: var(--accent);
+  color: var(--text);
   font-weight: 500;
 }
 
