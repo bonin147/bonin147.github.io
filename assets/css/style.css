@@ -189,6 +189,7 @@ a:hover {
   padding: 0.2rem 0 0.2rem 2rem;
   font-size: 0.8rem;
   color: var(--text-muted);
+  border-left: none;
   transition: all 0.15s;
 }
 
