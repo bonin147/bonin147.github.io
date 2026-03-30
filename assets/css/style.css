@@ -662,6 +662,10 @@ html.dark .subcategory-index-report {
   font-size: 0.92rem;
 }
 
+.post-content blockquote p {
+  margin: 0;
+}
+
 .post-content code {
   background: var(--tag-bg);
   border: 1px solid var(--tag-border);
