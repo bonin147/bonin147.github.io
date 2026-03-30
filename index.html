@@ -11,9 +11,9 @@ title: Home
   AI/ML paper reviews and investment reports on major stocks and indices.
 </p>
 
-{% assign subcategories = "Paper Review,Stock Report,Index Report" | split: "," %}
-{% assign subcat_ko = "논문 리뷰,주식 리포트,지수 리포트" | split: "," %}
-{% assign subcat_slugs = "paper-review,stock-report,index-report" | split: "," %}
+{% assign subcategories = "Paper Review,Stock Report,Index Report,Guide" | split: "," %}
+{% assign subcat_ko = "논문 리뷰,주식 리포트,지수 리포트,가이드" | split: "," %}
+{% assign subcat_slugs = "paper-review,stock-report,index-report,guide" | split: "," %}
 {% for subcat in subcategories %}
   {% assign filtered = site.posts | where: "subcategory", subcat %}
   {% if filtered.size > 0 %}
