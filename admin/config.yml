@@ -1,0 +1,37 @@
+backend:
+  name: github
+  repo: bonin147/bonin147.github.io
+  branch: main
+  auth_type: pkce
+  app_id: Ov23liUMA2k5Z1vbbrVd
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title (한국어)", name: "title", widget: "string" }
+      - { label: "Title (English)", name: "title_en", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - label: "Category"
+        name: "categories"
+        widget: "select"
+        options: ["NLP", "LLM", "RL", "Stock"]
+      - label: "Subcategory"
+        name: "subcategory"
+        widget: "select"
+        options: ["Paper Review", "Stock Report", "Index Report"]
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Bilingual", name: "bilingual", widget: "hidden", default: true }
+      - { label: "Paper URL", name: "paper_url", widget: "string", required: false }
+      - { label: "arXiv URL", name: "arxiv_url", widget: "string", required: false }
+      - { label: "Paper Venue", name: "paper_venue", widget: "string", required: false }
+      - { label: "Paper Authors", name: "paper_authors", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
