@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Post-training Pipeline 개요: SFT, RLHF, RL, 그리고 PEFT"
-title_en: "Post-training Pipeline Overview: SFT, RLHF, RL, and PEFT"
+title: "Post-training Pipeline 개요"
+title_en: "Post-training Pipeline Overview"
 date: 2026-03-30
 categories: [LLM]
 subcategory: "Guide"
