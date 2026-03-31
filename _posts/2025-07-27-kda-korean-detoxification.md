@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "K/DA: 한국어 암묵적 혐오 표현 정화를 위한 자동 데이터 생성 파이프라인"
+title: "한국어 특화 미묘한 욕설 데이터 생성 파이프라인"
 title_en: "K/DA: Automated Data Generation Pipeline for Detoxifying Implicitly Offensive Language in Korean"
 date: 2025-07-27
 categories: [NLP]
 subcategory: "Paper Review"
 tags: [My-Paper, Korean-NLP, Detoxification, Data-Generation, ACL]
-description: "한국어 암묵적 혐오 표현을 자동으로 탐지하고 정화하는 데이터 생성 파이프라인을 제안합니다."
+description: "한국어 특화 미묘한 욕설 자동으로 생성하는 파이프라인을 제안합니다."
 bilingual: true
 paper_url: "https://aclanthology.org/2025.acl-long.1039/"
 arxiv_url: "https://arxiv.org/abs/2506.13513"

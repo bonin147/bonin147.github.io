@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "애플(AAPL) 기관 리서치 심층 합성 리포트"
+title: "애플(AAPL) 기관 리서치 리포트"
 title_en: "Apple (AAPL) Institutional Research Deep Synthesis Report"
 date: 2026-03-26
 categories: [Stock]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "마이크로소프트(MSFT) 기관 리서치 심층 합성 리포트"
+title: "마이크로소프트(MSFT) 기관 리서치 리포트"
 title_en: "Microsoft (MSFT) Institutional Research Deep Synthesis Report"
 date: 2026-03-26
 categories: [Stock]

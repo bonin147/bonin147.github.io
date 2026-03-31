@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PANI: Offline RL에서 가장 저평가된 알고리즘 — Diffusion 없이 이긴다"
+title: "PANI: Offline RL에서 가장 저평가된 알고리즘"
 title_en: "PANI: The Most Underrated Algorithm in Offline RL — Beating Diffusion Without Diffusion"
 date: 2026-03-26
 categories: [RL]

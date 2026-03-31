@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "메타(META) 기관 리서치 심층 합성 리포트"
+title: "메타(META) 기관 리서치 리포트"
 title_en: "Meta Platforms (META) Institutional Research Deep Synthesis Report"
 date: 2026-03-26
 categories: [Stock]

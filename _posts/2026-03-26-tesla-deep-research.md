@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "테슬라(TSLA) 기관 리서치 심층 합성 리포트"
+title: "테슬라(TSLA) 기관 리서치 리포트"
 title_en: "Tesla (TSLA) Institutional Research Deep Synthesis Report"
 date: 2026-03-26
 categories: [Stock]
